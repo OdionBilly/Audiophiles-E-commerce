@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "ExtraBold";
+  src: local("Manrope-ExtraBold ")
+  url("./fonts/Manrope-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bold";
+  src: local("Manrope-Bold ")
+  url("./fonts/Manrope-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Medium";
+  src: local("Manrope-Medium") 
+  url("./fonts/Manrope-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Regular";
+  src: local("Manrope-Regular") 
+  url("./fonts/Manrope-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Light";
+  src: local("Manrope-Light") 
+  url("./fonts/Manrope-Light.ttf") format("truetype");
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import speakerimage from '../mobile-image/speaker-mobile-1.png'
 import speakerimage1 from '../mobile-image/speaker-mobile-2.png'
 import speakertablet from '../tablet-image/speaker-tablet-1.png'
@@ -10,6 +11,9 @@ import { Cartegory_1 } from './Cartegory-1';
 import { Cartegory_2 } from './Cartegory-2';
 
 export default function Cart_speaker() {
+
+  const navigate = useNavigate()
+
   return (
     <div>
       <div className="bg-[#101010]  text-[#f1f1f1]">
@@ -52,7 +56,7 @@ export default function Cart_speaker() {
               connectivity -- creating new possibilities for more pleasing and
               practical audio setups.
             </p>
-            <button
+            <button onClick={() => navigate('Details-speakers')}
               className="w-[160px] h-[48px] text-[#f1f1f1] bg-[#D87D4A] hover:bg-[#c78c6a]"
               type="button"
             >

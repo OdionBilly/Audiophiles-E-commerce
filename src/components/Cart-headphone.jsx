@@ -1,4 +1,5 @@
 import React from 'react'
+import { Navigate, useNavigate } from 'react-router-dom';
 import headphoneimage from '../mobile-image/Headphone.png'
 import headphoneimage2 from '../mobile-image/headphone-2.png'
 import headphoneimage3 from "../mobile-image/headphone-3.png";
@@ -8,15 +9,15 @@ import headphonetablet3 from "../tablet-image/headphone-tablet-2.png";
 import headphonesdesk  from '../assets/headphone-desk-1.png'
 import headphonesdesk1 from "../assets/headphone-desk-2.png";
 import headphonesdesk2 from "../assets/headphone-desk-3.png";
-
-
-
 import { Cartegory_1 } from './Cartegory-1';
 import { Cartegory_2 } from './Cartegory-2';
 
 
 
 export default function Cart_Headphone() {
+
+  const navigate = useNavigate()
+
   return (
     <div className=" ">
       <div className="bg-[#101010] text-[#f1f1f1]">
@@ -56,7 +57,7 @@ export default function Cart_Headphone() {
             It redefines your premium headphone experience by reproducing the
             balanced depth and precision of studio-quality sound.
           </p>
-          <button
+          <button onClick={() => navigate('Details-headphones')}
             className="w-[160px] h-[48px] text-[#f1f1f1] bg-[#D87D4A] hover:bg-[#c78c6a]"
             type="button"
           >

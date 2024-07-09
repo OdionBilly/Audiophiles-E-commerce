@@ -1,4 +1,5 @@
 import React from 'react'
+import { Navigate, useNavigate } from 'react-router-dom';
 import { Cartegory_1 } from './Cartegory-1';
 import { Cartegory_2 } from './Cartegory-2';
 import earphonemobile from '../mobile-image/earphone-mobile.png'
@@ -8,6 +9,10 @@ import earphonedesk from "../assets/earphone-desktop.png";
 
 
 export default function Cart_earphone() {
+
+  const navigate = useNavigate()
+
+
   return (
     <div>
       <div className="bg-[#101010]  text-[#f1f1f1]">
@@ -49,7 +54,7 @@ export default function Cart_earphone() {
             even in noisy environments with its active noise cancellation
             feature.
           </p>
-          <button
+          <button onClick={() => navigate('Details-earphones')}
             className="w-[160px] h-[48px] text-[#f1f1f1] bg-[#D87D4A] hover:bg-[#c78c6a]"
             type="button"
           >

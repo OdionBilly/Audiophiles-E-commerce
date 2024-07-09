@@ -43,20 +43,20 @@ export default function Cart() {
 
       {/* Cart section 3 */}
       <div className='bg-[#dedddd] lg:bg-[white] w-[375px] lg:w-[1110px] h-[320px] flex mt-[40px] mx-2 px-4 md:w-auto lg:mx-[13%] lg:mt-[80px]'>
-        <div className='w-[202px] h-[38px] pt-[50px] pl-[20px] lg:pl-auto'>
+        <div className='w-[202px] h-[38px] pt-[50px] pl-[20px] lg:pl-auto lg:mt-[70px]'>
           <h3 className='w-[202px] text-[28px] font-primarymedium py-4'>ZX7 SPEAKER</h3>
           <button className='text-[13px] border-2 border-black px-4 py-2 lg:px-6 hover:bg-[#101010] hover:text-[#f1f1f1] ' type="button">SEE PRODUCT</button>
         </div>
         <div className=''>
           <img className='sm:hidden'src={bitmap} alt="bitmap-mobile-image" />
           <img className='max-md:hidden lg:hidden md:ml-[100px] md:pl-10'src={bitmap1} alt="tablet-image" />
-          <img className='max-lg:hidden lg:ml-[190px]'src={bitmap2} alt="desktop-image" />
+          <img className='max-lg:hidden lg:ml-[200px]'src={bitmap2} alt="desktop-image" />
         </div>
 
       </div>
 
       {/* Cart Section 4 */}
-      <div>
+      <div className='lg:mt-[50px]'>
         <div className='mt-[40px] md:flex gap-1 lg:px-[10%] lg:mt-[50px]'>
           <div className='mx-2 w-[378px] lg:w-[540px]'>
             <img className='w-[378px] md:h-[320px] lg:w-[540px]' src={HeadphoneB} alt="headphones-image" />

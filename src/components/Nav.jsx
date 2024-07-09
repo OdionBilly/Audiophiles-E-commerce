@@ -4,6 +4,7 @@ import { HiMenu } from "react-icons/hi";
 import { NavLink } from 'react-router-dom';
 
 export default function Nav() {
+
   return (
     <div>
       <header className="bg-[#101010] text-[#f1f1f1]  py-5 px-[13%]">
@@ -19,7 +20,7 @@ export default function Nav() {
           <div className="md:static absolute bg-[#101010] md:min-h-fit min-h-[50vh] left-0 top-[-100%] flex items-center md:w-auto w-full px-2 text-[13px]">
             <ul
               className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8
-                                  max-lg:hidden"
+                                max-lg:hidden"
             >
               <NavLink to="/">HOME</NavLink>
               <NavLink to="/headphones">HEADPHONES</NavLink>
@@ -27,6 +28,8 @@ export default function Nav() {
               <NavLink to="/earphones">EARPHONES</NavLink>
             </ul>
           </div>
+          
+          {/* cart icon */}
           <div className="cursor-pointer">
             <FiShoppingCart />
           </div>

@@ -7,7 +7,7 @@ export default function Nav() {
 
   return (
     <div>
-      <header className="bg-[#101010] text-[#f1f1f1]  py-5 px-[13%]">
+      <header className="bg-[#101010] text-[#f1f1f1] px-[13%] py-5 md:px-[8%] ">
         <nav className="flex justify-between items-center py-5">
           <div className="lg:hidden cursor-pointer">
             <HiMenu />
@@ -28,7 +28,7 @@ export default function Nav() {
               <NavLink to="/earphones">EARPHONES</NavLink>
             </ul>
           </div>
-          
+
           {/* cart icon */}
           <div className="cursor-pointer">
             <FiShoppingCart />

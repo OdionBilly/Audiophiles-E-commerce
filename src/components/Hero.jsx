@@ -6,7 +6,7 @@ export default function Hero() {
     <div className="relative overflow-hidden max-sm:bg-mobile_hero_image max-lg:bg-mobile_hero_image bg-no-repeat bg-center bg-[#101010] h-[600px] text-[#f1f1f1]">
       <div
         className="absolute left-[39px] bottom-[149px] max-sm:px-[13%] md:w-[348px] h-[290px] text-center 
-                        md:left-[220px] lg:left-1 lg:px-[12%] lg:top-1 lg:w-[1440px] lg:flex lg:text-left"
+                        md:left-[220px] lg:left-1 lg:px-[8%] lg:top-1 lg:w-[1440px] lg:flex lg:text-left"
       >
         <div className=" lg:py-[50px] ">
           <h2 className="text-[14px] font-extralight py-1 md:ml-[10px] tracking-widest  lg:pl-[-10px] lg:text-left">

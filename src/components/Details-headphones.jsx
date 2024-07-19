@@ -6,16 +6,17 @@ import { Cartegory_2 } from './Cartegory-2'
 export const Details_headphones = () => {
   
   const headphones = productData.filter(product => product.category === 'headphones') 
-  console.log(headphones[1].categoryImage)  
+  // console.log(headphones[1].categoryImage)  
+
 
   return (
-    <div className="px-4 md:px-[8%]">
-      <h1>go back</h1>
+    <div className="px-4 md:px-[4%]">
+          <button className='lg:px-[4%] text-[15px] font-primarymedium'>Go Back</button>
       {/* mapping throught the json file */}
-      <div className="md:flex md:flex-col-1 justify-between pt-5">
+      <div className="md:flex md:flex-col-1 justify-between pt-5 lg:px-[4%]">
         {headphones.map((headphone) => {
           return (
-            <div key={headphone.id}>
+            <div key={headphones.id}>
               <div className="">
                 <img
                   className="sm:hidden"
@@ -31,7 +32,7 @@ export const Details_headphones = () => {
                 </div>
                 <img
                   className="max-sm:hidden max-lg:hidden"
-                  src={headphone.categoryImage.mobile}
+                  src={headphone.categoryImage.desktop}
                   alt=""
                 />
               </div>
@@ -55,7 +56,7 @@ export const Details_headphones = () => {
               - 0 +
             </button>
             <button
-              className="bg-[#d87d4A] text-[#f1f1f1] ml-[30px] px-8 py-4 cursor-pointer hover:bg-slate-500"
+              className="bg-[#d87d4A] text-[#f1f1f1] ml-[30px] px-8 py-4 cursor-pointer hover:bg-[#c78c6a]"
               type="button"
             >
               ADD TO CART{" "}
@@ -67,7 +68,7 @@ export const Details_headphones = () => {
       {/* Features section */}
 
       <div>
-        <div className=" lg:flex items-baseline ">
+        <div className=" lg:flex items-baseline  lg:px-[4%]">
           <div className="md:mt-0">
             <h1 className="py-4 md:mt-10 font-primarymedium text-[25px]">
               FEATURES
@@ -136,76 +137,158 @@ export const Details_headphones = () => {
       {/* cartegory gallary */}
 
       <div className="">
-        <div>
-          <div className="flex flex-col gap-8">
-            <div className=" md:hidden">
+        <div className="">
+          <div className=" md:mt-5 md:relative lg:relative lg:px-[4%]">
+            <div className=" py-0 lg:mt-[100px]">
+              {/* first image */}
               <img
+                className="md:hidden lg:hidden"
                 src="/src/assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg"
-                alt=""
+                alt="mobile"
+              />
+              <img
+                className="max-sm:hidden lg:hidden "
+                src="/src/assets/product-xx99-mark-two-headphones/tablet/tablet-2.png"
+                alt="tablet"
+              />
+
+              <img
+                className="max-sm:hidden max-lg:hidden lg:h-[280px] lg:w-[492px]"
+                src="/src/assets/product-xx99-mark-two-headphones/tablet/image-gallery-1.jpg"
+                alt="desktop"
               />
             </div>
-            <div>
+            {/* second image */}
+            <div className="py-8 lg:py-5 md:py-4">
               <img
+                className="md:hidden lg:hidden "
                 src="/src/assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg"
-                alt=""
+                alt="mobile"
               />
-            </div>
-            <div>
               <img
+                className="max-sm:hidden lg:hidden"
+                src="/src/assets/product-xx99-mark-two-headphones/tablet/tablet-3.png"
+                alt="tablet"
+              />
+
+              <img
+                className="max-sm:hidden max-lg:hidden lg:h-[280px] lg:w-[492px]"
+                src="/src/assets/product-xx99-mark-two-headphones/tablet/image-gallery-2.jpg"
+                alt="desktop"
+              />
+            </div>
+            {/* third image */}
+            <div className=" md:py-0 py-0 lg:absolute top-[-1px] lg:left-[48%] bg-[#1010101]">
+              <img
+                className="md:hidden lg:hidden "
                 src="/src/assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg"
-                alt=""
+                alt="mobile"
+              />
+              <img
+                className="max-sm:hidden lg:hidden md:absolute top-0 left-[44%] "
+                src="/src/assets/product-xx99-mark-two-headphones/tablet/Tablet.png"
+                alt="tablet"
+              />
+
+              <img
+                className="max-sm:hidden max-lg:hidden lg:h-[578px] lg:w-[630px]"
+                src="/src/assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg"
+                alt="desktop"
               />
             </div>
           </div>
         </div>
-      </div>
 
-      {/* you may also like section */}
+        {/* you may also like section */}
 
-      <div>
-        <div className="text-center py-10">
+        <div className=" mt-[50px] lg:px-[4%]">
           <h1 className="font-primarymedium text-[25px]">YOU MAY ALSO LIKE</h1>
-          <div className="py-8">
-            <img
-              src="/src/shared/mobile/image-xx99-mark-one-headphones.jpg"
-              alt=""
-            />
-            <h2 className="font-primaryregular text-[20px] py-4">
-              XX99 MARK 1
-            </h2>
-            <button
-              className="bg-[#d87d4A] px-6 py-2 text-[#f1f1f1] text-[13px] "
-              type="button"
-            >
-              SEE PRODUCT
-            </button>
-          </div>
-          <div className="py-5">
-            <img src="/src/shared/mobile/image-xx59-headphones.jpg" alt="" />
-            <h2 className="font-primaryregular text-[20px] py-4">XX59</h2>
-            <button
-              className="bg-[#d87d4A] px-6 py-2 text-[#f1f1f1] text-[13px]"
-              type="button"
-            >
-              SEE PRODUCT
-            </button>
-          </div>
-          <div className="py-5">
-            <img src="/src/shared/mobile/image-zx9-speaker.jpg" alt="" />
-            <h2 className="font-primaryregular text-[20px] py-4">
-              ZX9 SPEAKER
-            </h2>
-            <button
-              className="bg-[#d87d4A] px-6 py-2 text-[#f1f1f1] text-[13px] "
-              type="button"
-            >
-              SEE PRODUCT
-            </button>
+          <div className="text-center py-4 md:flex gap-5">
+            <div className="md:py-5">
+              <img
+                className="md:hidden lg:hidden"
+                src="/src/shared/mobile/image-xx99-mark-one-headphones.jpg"
+                alt=""
+              />
+              <img
+                className="max-sm:hidden lg:hidden "
+                src="/src/shared/tablet/image-xx99-mark-one-headphones.jpg"
+                alt="tablet-image"
+              />
+              <img
+                className="max-sm:hidden max-lg:hidden"
+                src="/src/shared/desktop/image-xx99-mark-one-headphones.jpg"
+                alt="desktop-image"
+              />
+              <h2 className="font-primaryregular text-[20px] py-4">
+                XX99 MARK 1
+              </h2>
+              <button
+                className="bg-[#d87d4A] px-6 py-2 text-[#f1f1f1] text-[13px] hover:bg-[#c78c6a] "
+                type="button"
+              >
+                SEE PRODUCT
+              </button>
+            </div>
+
+            <div className="py-5">
+              <img
+                className=" md:hidden lg:hidden"
+                src="/src/shared/mobile/image-xx59-headphones.jpg"
+                alt=""
+              />
+              <img
+                className="max-sm:hidden lg:hidden"
+                src="/src/shared/tablet/image-xx59-headphones.jpg"
+                alt=""
+              />
+              <img
+                className="max-sm:hidden max-lg:hidden"
+                src="/src/shared/desktop/image-xx59-headphones.jpg"
+                alt=""
+              />
+              <h2 className="font-primaryregular text-[20px] py-4">XX59</h2>
+              <button
+                className="bg-[#d87d4A] px-6 py-2 text-[#f1f1f1] text-[13px] hover:bg-[#c78c6a]"
+                type="button"
+              >
+                SEE PRODUCT
+              </button>
+            </div>
+
+            <div className="py-5">
+              <img
+                className="md:hidden lg:hidden"
+                src="/src/shared/mobile/image-zx9-speaker.jpg"
+                alt=""
+              />
+              <img
+                className="max-sm:hidden lg:hidden"
+                src="/src/shared/tablet/image-zx9-speaker.jpg"
+                alt=""
+              />
+
+              <img
+                className="max-sm:hidden max-lg:hidden"
+                src="/src/shared/desktop/image-zx9-speaker.jpg"
+                alt="desktop"
+              />
+              <h2 className="font-primaryregular text-[20px] py-4">
+                ZX9 SPEAKER
+              </h2>
+              <button
+                className="bg-[#d87d4A] px-6 py-2 text-[#f1f1f1] text-[13px] hover:bg-[#c78c6a] "
+                type="button"
+              >
+                SEE PRODUCT
+              </button>
+            </div>
           </div>
         </div>
+        <Cartegory_1 />
+        <Cartegory_2 />
       </div>
-      <Cartegory_1/>
-      <Cartegory_2/>
     </div>
   );
 }
+

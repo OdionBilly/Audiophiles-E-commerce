@@ -15,18 +15,20 @@ export default function Cart_speaker() {
   const navigate = useNavigate()
 
   return (
-    <div>
+    <div className=''> 
       <div className="bg-[#101010]  text-[#f1f1f1]">
         <div>
-          <h1 className="text-[28px] px-[28%] font-primarybold md:text-[40px] md:px-[35%] lg:px-[45%]">SPEAKERS</h1>
+          <h1 className="text-[28px] px-[28%] font-primarybold md:text-[40px] md:px-[35%] lg:px-[45%]">
+            SPEAKERS
+          </h1>
         </div>
       </div>
 
       {/* cartegory section 1 */}
 
       <div>
-        <div className="lg:flex lg:gap-[150px] lg:px-[11%] lg:mt-10">
-          <div className="p-6">
+        <div className="lg:flex lg:gap-[150px] lg:px-[6%] lg:mt-10">
+          <div className="p-6 lg:w-[450px]">
             <img className="sm:hidden" src={speakerimage} alt="mobile image" />
             <img
               className="max-md:hidden lg:hidden"
@@ -34,7 +36,7 @@ export default function Cart_speaker() {
               alt="headphone-tablet-image"
             />
             <img
-              className="hidden lg:block"
+              className="hidden lg:block "
               src={speakerdesk}
               alt="headphone-des"
             />
@@ -56,7 +58,8 @@ export default function Cart_speaker() {
               connectivity -- creating new possibilities for more pleasing and
               practical audio setups.
             </p>
-            <button onClick={() => navigate('Details-speakers')}
+            <button
+              onClick={() => navigate("Details-speakers")}
               className="w-[160px] h-[48px] text-[#f1f1f1] bg-[#D87D4A] hover:bg-[#c78c6a]"
               type="button"
             >
@@ -67,7 +70,7 @@ export default function Cart_speaker() {
 
         {/* cartegory section 2 */}
 
-        <div className="text-center py-10 mt-10 lg:flex lg:flex-row-reverse lg:gap-[100px] lg:px-[11%] lg:text-left">
+        <div className="text-center py-10 mt-10 lg:flex lg:flex-row-reverse lg:gap-[100px] lg:px-[9%] lg:text-left">
           <div className="p-6">
             <img
               className="sm:hidden"
@@ -80,7 +83,7 @@ export default function Cart_speaker() {
               alt=" headphone-tablet-image"
             />
             <img
-              className="hidden lg:block"
+              className="hidden lg:block lg:w-[450px]"
               src={speakerdesk1}
               alt="desktop-image"
             />
@@ -110,7 +113,7 @@ export default function Cart_speaker() {
         </div>
       </div>
 
-      <Cartegory_1 />
+      <Cartegory_1/>
       <Cartegory_2 />
     </div>
   );

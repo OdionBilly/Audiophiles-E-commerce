@@ -7,7 +7,7 @@ import Earphone from "./Pages/Earphone";
 import Nav from "./components/Nav";
 import { Details_headphones } from "./components/Details-headphones";
 import { Details_speakers } from "./components/Details-speakers";
-import { Details_earphones } from "./components/Details-earphones";
+import { Details_earphones } from "./components/Details-earphones-1";
 
 function App() {
 

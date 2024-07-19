@@ -9,7 +9,7 @@ export const Details_speakers = () => {
   );
   console.log(speakers[1].gallery);
   return (
-    <div className="lg:px-[8%]">
+    <div className="lg:px-[2%]">
       <div className="md:px-[6%] py-2">
         <button className="max-sm:px-[6%]">go Back</button>
         <div className=" md:flex  md:gap-[80px] lg:gap-[170px] py-4">
@@ -172,7 +172,7 @@ export const Details_speakers = () => {
               />
             </div>
             {/* third image */}
-            <div className=" md:py-0 py-0 lg:absolute top-[-1px] lg:left-[49%] bg-[#1010101]">
+            <div className=" md:py-0 py-0 lg:absolute top-[-1px] lg:left-[43%] bg-[#1010101]">
               <img
                 className="md:hidden lg:hidden "
                 src={speakers[1].gallery.third.desktop}
@@ -192,10 +192,9 @@ export const Details_speakers = () => {
             </div>
           </div>
         </div>
-
-        <Cartegory_1 />
-        <Cartegory_2 />
       </div>
+      <Cartegory_1 />
+      <Cartegory_2 />
     </div>
   );
 };

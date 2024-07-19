@@ -6,8 +6,8 @@ import headphone from "../mobile-image/Group 8.png";
 
 export const Cartegory_1 = () => {
   return (
-    <div className="">
-      <div className="md:px-[1px] lg:px-[9%] md:flex gap-5 lg:gap-10 lg:flex py-5 mb-8 mt-10">
+    <div className="lg:px-[13%]">
+      <div className="md:px-[1px] md:flex gap-5 lg:gap-10 lg:flex py-5 mb-8 mt-10">
         <div className="max-sm:m-5">
           <img
             className="md:w-auto md:h-auto lg:w-[350px] lg:h-[284px] cursor-pointer"

@@ -10,10 +10,12 @@ export const Details_headphones = () => {
 
 
   return (
-    <div className="px-4 md:px-[4%]">
-          <button className='lg:px-[4%] text-[15px] font-primarymedium'>Go Back</button>
+    <div className="px-4 md:px-[4%] lg:px-[8%]">
+      <button className="lg:px-[4%] text-[15px] font-primarymedium">
+        Go Back
+      </button>
       {/* mapping throught the json file */}
-      <div className="md:flex md:flex-col-1 justify-between pt-5 lg:px-[4%]">
+      <div className="md:flex md:flex-col-1 justify-between pt-5 lg:px-[%]">
         {headphones.map((headphone) => {
           return (
             <div key={headphones.id}>
@@ -68,7 +70,7 @@ export const Details_headphones = () => {
       {/* Features section */}
 
       <div>
-        <div className=" lg:flex items-baseline  lg:px-[4%]">
+        <div className=" lg:flex items-baseline ">
           <div className="md:mt-0">
             <h1 className="py-4 md:mt-10 font-primarymedium text-[25px]">
               FEATURES
@@ -138,7 +140,7 @@ export const Details_headphones = () => {
 
       <div className="">
         <div className="">
-          <div className=" md:mt-5 md:relative lg:relative lg:px-[4%]">
+          <div className=" md:mt-5 md:relative lg:relative lg:px-[%]">
             <div className=" py-0 lg:mt-[100px]">
               {/* first image */}
               <img
@@ -201,7 +203,7 @@ export const Details_headphones = () => {
 
         {/* you may also like section */}
 
-        <div className=" mt-[50px] lg:px-[4%]">
+        <div className=" mt-[50px] lg:px-[%]">
           <h1 className="font-primarymedium text-[25px]">YOU MAY ALSO LIKE</h1>
           <div className="text-center py-4 md:flex gap-5">
             <div className="md:py-5">
@@ -284,9 +286,9 @@ export const Details_headphones = () => {
               </button>
             </div>
           </div>
+          <Cartegory_1 />
+          <Cartegory_2 />
         </div>
-        <Cartegory_1 />
-        <Cartegory_2 />
       </div>
     </div>
   );

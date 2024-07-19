@@ -22,7 +22,9 @@ export default function Cart_Headphone() {
     <div className=" ">
       <div className="bg-[#101010] text-[#f1f1f1]">
         <div>
-          <h1 className="text-[28px] px-[28%] font-primarybold  md:px-[30%] md:text-[40px] lg:px-[40%]">HEADPHONES</h1>
+          <h1 className="text-[28px] px-[28%] font-primarybold  md:px-[30%] md:text-[40px] lg:px-[40%]">
+            HEADPHONES
+          </h1>
         </div>
       </div>
 
@@ -57,7 +59,8 @@ export default function Cart_Headphone() {
             It redefines your premium headphone experience by reproducing the
             balanced depth and precision of studio-quality sound.
           </p>
-          <button onClick={() => navigate('Details-headphones')}
+          <button
+            onClick={() => navigate("Details-headphones")}
             className="w-[160px] h-[48px] text-[#f1f1f1] bg-[#D87D4A] hover:bg-[#c78c6a]"
             type="button"
           >
@@ -67,49 +70,47 @@ export default function Cart_Headphone() {
       </div>
 
       {/* Cartegory section 2 */}
-      
-        <div className="text-center py-10 mt-10 lg:flex lg:flex-row-reverse lg:gap-[100px] lg:px-[11%] lg:text-left">
-          <div className="p-6">
-            <img
-              className="sm:hidden"
-              src={headphoneimage2}
-              alt="mobile-headphone-image"
-            />
-            <img
-              className="max-md:hidden lg:hidden"
-              src={headphonetablet2}
-              alt=" headphone-tablet-image"
-            />
-            <img
-              className="hidden lg:block"
-              src={headphonesdesk1}
-              alt="desktop-image"
-            />
-          </div>
 
-          <div className="lg:mt-[80px] lg:ml-8">
-            <h1 className="text-[28px] font-primarybold w-[327px] mx-8 md:mx-[200px] lg:py-1 lg:mx-0">
-              XX99 MARK II HEADPHONES
-            </h1>
-
-            <p
-              className="w-[327px] text-[15px] font-light mx-8 py-4 overflow-hidden md:w-[572px] md:mx-[100px] 
-                         lg:w-[445px] lg:text-left lg:mx-0"
-            >
-              As the gold standard for headphones, the classic XX99 Mark I
-              offers detailed and accurate audio reproduction for audiophiles,
-              mixing engineers, and music aficionados alike in studios and on
-              the go.
-            </p>
-            <button
-              className="w-[160px] h-[48px] text-[#f1f1f1] bg-[#D87D4A] hover:bg-[#c78c6a]"
-              type="button"
-            >
-              SEE PRODUCT
-            </button>
-          </div>
+      <div className="text-center py-10 mt-10 lg:flex lg:flex-row-reverse lg:gap-[100px] lg:px-[11%] lg:text-left ">
+        <div className="p-6">
+          <img
+            className="sm:hidden"
+            src={headphoneimage2}
+            alt="mobile-headphone-image"
+          />
+          <img
+            className="max-md:hidden lg:hidden"
+            src={headphonetablet2}
+            alt=" headphone-tablet-image"
+          />
+          <img
+            className="hidden lg:block"
+            src={headphonesdesk1}
+            alt="desktop-image"
+          />
         </div>
-      
+
+        <div className="lg:mt-[80px] lg:ml-8">
+          <h1 className="text-[28px] font-primarybold w-[327px] mx-8 md:mx-[200px] lg:py-1 lg:mx-0">
+            XX99 MARK II HEADPHONES
+          </h1>
+
+          <p
+            className="w-[327px] text-[15px] font-light mx-8 py-4 overflow-hidden md:w-[572px] md:mx-[100px] 
+                         lg:w-[445px] lg:text-left lg:mx-0"
+          >
+            As the gold standard for headphones, the classic XX99 Mark I offers
+            detailed and accurate audio reproduction for audiophiles, mixing
+            engineers, and music aficionados alike in studios and on the go.
+          </p>
+          <button
+            className="w-[160px] h-[48px] text-[#f1f1f1] bg-[#D87D4A] hover:bg-[#c78c6a]"
+            type="button"
+          >
+            SEE PRODUCT
+          </button>
+        </div>
+      </div>
 
       {/* Cartegory section 3 */}
 

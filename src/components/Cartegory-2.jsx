@@ -6,8 +6,8 @@ import bitmapd from "../mobile-image/Bitmap-2.png";
 
 export const Cartegory_2 = () => {
   return (
-    <div className='md:mt-[100px] lg:mt-0 lg:px-[4%]'>
-      <div className="lg:flex flex-row-reverse w-full lg:px-[%] lg:mt-8] lg:gap-[120px]">
+    <div className='md:mt-[100px] lg:mt-0 lg:px-[11%]'>
+      <div className="lg:flex flex-row-reverse w-full lg:px-[%] lg:mt-8] lg:gap-[9px]">
         <div className="mx-2 text-center mt-10 md:mx-2]">
           <img
             className="sm:hidden w-[375px]"
@@ -21,10 +21,10 @@ export const Cartegory_2 = () => {
           />
           <img className="max-lg:hidden" src={bitmapd} alt="desktop-image" />
         </div>
-        <div className="mx-2 mt-8 lg:mt-[130px] lg:ml-[-40px]">
+        <div className="mx-2 mt-8 lg:mt-[130px] lg:ml-[-50px]">
           <h1
             className="py-4 px-4 ml-2 leading-10 text-[28px] font-primarymedium w-[327px] md:w-[573px] md:text-[40px] md:text-center md:mx-[40px]
-                        lg:text-left lg:w-[510px] lg:ml-[20px] "
+                        lg:text-left lg:w-[510px] lg:ml-[17px] "
           >
             BRINGING YOU THE <span className="text-[#D87D4A]">BEST</span> AUDIO
             GEAR

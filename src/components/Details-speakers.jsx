@@ -10,10 +10,10 @@ export const Details_speakers = () => {
   console.log(speakers[1].gallery);
   return (
     <div className="lg:px-[8%]">
-      <div className="md:px-12 py-2">
-        <button className="">go Back</button>
+      <div className="md:px-[6%] py-2">
+        <button className="max-sm:px-[6%]">go Back</button>
         <div className=" md:flex  md:gap-[80px] lg:gap-[170px] py-4">
-          <div>
+          <div className="max-sm:px-[6%]">
             {speakers.map((speaker) => {
               return (
                 <div key={speakers.id}>
@@ -70,7 +70,7 @@ export const Details_speakers = () => {
         </div>
 
         {/* feature section */}
-        <div className="px-5 lg:px-0 lg:flex items-baseline lg:gap-[199px] lg:mt-3">
+        <div className="max-sm:px-[6%] lg:px-0 lg:flex items-baseline lg:gap-[199px] lg:mt-3">
           <div className="py-4">
             <h1 className="font-primarybold text-[24px] py-4">FEATURES</h1>
             <p className="font-primaryregular text-[15px] lg:w-[500px]">
@@ -93,7 +93,7 @@ export const Details_speakers = () => {
             <div>
               <h1 className="text-[24px] font-primarybold py-2">IN THE BOX</h1>
             </div>
-            <div className="text-[15px] font-primaryregular">
+            <div className="text-[15px] font-primaryregular py-2">
               <ul>
                 <li>
                   <span className="text-[#d87d4A]">
@@ -132,8 +132,8 @@ export const Details_speakers = () => {
 
         {/* gallery feature section */}
         <div>
-          <div className=" md:mt-5 md:relative lg:relative lg:px-[4%]">
-            <div className=" py-0 lg:mt-[100px]">
+          <div className="md:mt-5 md:relative lg:relative max-sm:px-[6%] md:px-[1%]">
+            <div className=" py-0 lg:mt-[50px]">
               {/* first image */}
               <img
                 className="md:hidden lg:hidden"
@@ -142,7 +142,7 @@ export const Details_speakers = () => {
               />
               <img
                 className="max-sm:hidden lg:hidden "
-                src={speakers[1].gallery.first.tablet}
+                src="/src/assets/product-zx9-speaker/tablet/tablet-zx9-3.png"
                 alt="tablet"
               />
 
@@ -155,46 +155,47 @@ export const Details_speakers = () => {
             {/* second image */}
             <div className="py-8 lg:py-5 md:py-4">
               <img
-                className="md:hidden lg:hidden "
+                className="md:hidden lg:hidden"
                 src={speakers[1].gallery.second.mobile}
                 alt="mobile"
               />
               <img
                 className="max-sm:hidden lg:hidden"
-                src={speakers[1].gallery.second.tablet}
+                src="/src/assets/product-zx9-speaker/tablet/tablet-zx9-2.png"
                 alt="tablet"
               />
 
               <img
-                className="max-sm:hidden max-lg:hidden lg:h-[280px] lg:w-[492px]"
+                className="max-sm:hidden max-lg:hidden lg:w-[492px]"
                 src={speakers[1].gallery.second.desktop}
                 alt="desktop"
               />
             </div>
             {/* third image */}
-            <div className=" md:py-0 py-0 lg:absolute top-[-1px] lg:left-[48%] bg-[#1010101]">
+            <div className=" md:py-0 py-0 lg:absolute top-[-1px] lg:left-[49%] bg-[#1010101]">
               <img
                 className="md:hidden lg:hidden "
-                src={speakers[1].gallery.third.mobile}
+                src={speakers[1].gallery.third.desktop}
                 alt="mobile"
               />
               <img
                 className="max-sm:hidden lg:hidden md:absolute top-0 left-[44%] "
-                src={speakers[1].gallery.third.mobile}
+                src="/src/assets/product-zx9-speaker/tablet/tablet.png"
                 alt="tablet"
               />
 
               <img
-                className="max-sm:hidden max-lg:hidden lg:h-[578px] lg:w-[630px]"
+                className="max-sm:hidden max-lg:hidden lg:h-[610px] lg:w-[630px]"
                 src={speakers[1].gallery.third.desktop}
                 alt="desktop"
               />
             </div>
           </div>
         </div>
+
+        <Cartegory_1 />
+        <Cartegory_2 />
       </div>
-      <Cartegory_1 />
-      <Cartegory_2 />
     </div>
   );
 };

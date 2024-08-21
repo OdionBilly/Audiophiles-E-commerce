@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigate, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import headphoneimage from '../mobile-image/Headphone.png'
 import headphoneimage2 from '../mobile-image/headphone-2.png'
 import headphoneimage3 from "../mobile-image/headphone-3.png";
@@ -31,13 +31,18 @@ export default function Cart_Headphone() {
       {/* cartegory  section 1 */}
       <div className="lg:flex lg:gap-[150px] lg:px-[11%] lg:mt-10">
         <div className="p-6">
-          <img className="sm:hidden" src={headphoneimage} alt="mobile image" />
+          <img
+            className="sm:hidden"
+            src={headphoneimage}
+            alt="mobile image"
+          />
           <img
             className="max-md:hidden lg:hidden"
             src={headphonetablet}
             alt="headphone-tablet-image"
           />
           <img
+            onClick={() => navigate("headphones")}
             className="hidden lg:block"
             src={headphonesdesk}
             alt="headphone-des"
@@ -60,7 +65,7 @@ export default function Cart_Headphone() {
             balanced depth and precision of studio-quality sound.
           </p>
           <button
-            onClick={() => navigate("Details-headphones")}
+            onClick={() => navigate("headphones")}
             className="w-[160px] h-[48px] text-[#f1f1f1] bg-[#D87D4A] hover:bg-[#c78c6a]"
             type="button"
           >
@@ -92,7 +97,7 @@ export default function Cart_Headphone() {
 
         <div className="lg:mt-[80px] lg:ml-8">
           <h1 className="text-[28px] font-primarybold w-[327px] mx-8 md:mx-[200px] lg:py-1 lg:mx-0">
-            XX99 MARK II HEADPHONES
+            XX99 MARK I HEADPHONES
           </h1>
 
           <p

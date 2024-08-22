@@ -7,11 +7,13 @@ export const Details_speakers = () => {
   const speakers = ProductData.filter(
     (product) => product.category === "speakers"
   );
-  console.log(speakers[1].gallery);
+  // console.log(speakers[1].gallery);
   return (
     <div className="lg:px-[2%]">
       <div className="md:px-[6%] py-2">
-        <button className="max-sm:px-[6%]">go Back</button>
+        <button className="max-sm:px-[6%] bg-[#D87D4A] text-[#fff] px-4 py-1 font-thin cursor-pointer hover:bg-[#965f40]">
+          go Back
+        </button>
         <div className=" md:flex  md:gap-[80px] lg:gap-[170px] py-4">
           <div className="max-sm:px-[6%]">
             {speakers.map((speaker) => {

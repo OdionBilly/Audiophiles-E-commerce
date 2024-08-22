@@ -65,7 +65,7 @@ export default function Cart_Headphone() {
             balanced depth and precision of studio-quality sound.
           </p>
           <button
-            onClick={() => navigate("headphones")}
+            onClick={() => navigate("Details-headphones")}
             className="w-[160px] h-[48px] text-[#f1f1f1] bg-[#D87D4A] hover:bg-[#c78c6a]"
             type="button"
           >

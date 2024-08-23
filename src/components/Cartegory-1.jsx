@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import headset from "../mobile-image/Group 6.png";
 import speaker from "../mobile-image/Group 7.png";
 import headphone from "../mobile-image/Group 8.png";
+import { Example } from './Example';
 
 
 export const Cartegory_1 = () => {
@@ -36,6 +37,8 @@ export const Cartegory_1 = () => {
           />
         </div>
       </div>
+
+      <Example/>
     </div>
   );
 }

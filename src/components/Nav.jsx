@@ -10,7 +10,9 @@ export default function Nav() {
       <header className="bg-[#101010] text-[#f1f1f1] px-[13%] py-5 md:px-[8%] ">
         <nav className="flex justify-between items-center py-5">
           <div className="lg:hidden cursor-pointer">
-            <HiMenu />
+            <h1>
+              <HiMenu />
+            </h1>
           </div>
 
           <div className="max-sm:text-[24px] md:text-[30px] md:w-[375px]">
@@ -31,7 +33,10 @@ export default function Nav() {
 
           {/* cart icon */}
           <div className="cursor-pointer">
-            <FiShoppingCart />
+            <h1>
+              <span>0</span>
+              <FiShoppingCart />
+            </h1>
           </div>
         </nav>
       </header>

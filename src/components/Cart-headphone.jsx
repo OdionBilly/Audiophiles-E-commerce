@@ -31,11 +31,7 @@ export default function Cart_Headphone() {
       {/* cartegory  section 1 */}
       <div className="lg:flex lg:gap-[150px] lg:px-[11%] lg:mt-10">
         <div className="p-6">
-          <img
-            className="sm:hidden"
-            src={headphoneimage}
-            alt="mobile image"
-          />
+          <img className="sm:hidden" src={headphoneimage} alt="mobile image" />
           <img
             className="max-md:hidden lg:hidden"
             src={headphonetablet}
@@ -109,6 +105,7 @@ export default function Cart_Headphone() {
             engineers, and music aficionados alike in studios and on the go.
           </p>
           <button
+            onClick={() => navigate("Details-headphones-1")}
             className="w-[160px] h-[48px] text-[#f1f1f1] bg-[#D87D4A] hover:bg-[#c78c6a]"
             type="button"
           >

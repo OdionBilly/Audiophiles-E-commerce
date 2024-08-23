@@ -1,10 +1,10 @@
 import React from 'react'
-// import Cart_speaker from '../components/Cart-speaker'
+
 
 export default function Speaker() {
   return (
     <div>
-        {/* <Cart_speaker/> */}
+      <h1>speakers</h1>
     
 
     </div>

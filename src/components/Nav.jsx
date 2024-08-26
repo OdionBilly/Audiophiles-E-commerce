@@ -24,10 +24,40 @@ export default function Nav() {
               className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8
                                 max-lg:hidden"
             >
-              <NavLink to="/">HOME</NavLink>
-              <NavLink to="/headphones">HEADPHONES</NavLink>
-              <NavLink to="/speakers">SPEAKERS</NavLink>
-              <NavLink to="/earphones">EARPHONES</NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "text-[#D87D4A]" : "navlink" 
+                }
+              >
+                <li>HOME </li>
+              </NavLink>
+              <NavLink
+                to="headphones"
+                className={({ isActive }) =>
+                  isActive ? "text-[#D87D4A]" : "navlink"
+                }
+              >
+                <li> HEADPHONES </li>
+              </NavLink>
+              <NavLink
+                to="/speakers"
+                className={({ isActive }) =>
+                  isActive ? "text-[#D87D4A]" : "navlink"
+                }
+              >
+                {" "}
+                <li>SPEAKERS </li>
+              </NavLink>
+              <NavLink
+                to="/earphones"
+                className={({ isActive }) =>
+                  isActive ? "text-[#D87D4A]" : "navlink"
+                }
+              >
+                {" "}
+                <li> EARPHONES </li>
+              </NavLink>
             </ul>
           </div>
 

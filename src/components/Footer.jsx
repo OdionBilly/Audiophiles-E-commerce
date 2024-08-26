@@ -13,20 +13,40 @@ export default function Footer() {
         </div>
         <div className="">
           <ul className="sm:flex text-[13px] px-[45%] py-2 leading-10 md:flex md:px-4 md:gap-5 font-primaryregular lg:mr-[30px]">
-            <NavLink to="/" className="">
-              HOME
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-[#D87D4A]" : "navlink"
+              }
+            >
+              <li>HOME</li>
             </NavLink>
             <br />
-            <NavLink to="/headphones" className="max-sm:ml-[-20px]">
-              HEADPHONES
+            <NavLink
+              to="/headphones"
+              className={({ isActive }) =>
+                isActive ? "text-[#D87D4A]" : "navlink"
+              }
+            >
+              <li className="max-sm:ml-[-20px]"> HEADPHONES</li>
             </NavLink>{" "}
             <br />
-            <NavLink to="/speakers" className="max-sm:ml-[-10px]">
-              SPEAKERS
+            <NavLink
+              to="/speakers"
+              className={({ isActive }) =>
+                isActive ? "text-[#D87D4A]" : "navlink"
+              }
+            >
+              <li className="max-sm:ml-[-10px]">SPEAKERS</li>
             </NavLink>{" "}
             <br />
-            <NavLink to="/earphones" className="max-sm:ml-[-15px]">
-              EARPHONES
+            <NavLink
+              to="/earphones"
+              className={({ isActive }) =>
+                isActive ? "text-[#D87D4A]" : "navlink"
+              }
+            >
+              <li className="max-sm:ml-[-15px]">EARPHONES</li>
             </NavLink>{" "}
             <br />
           </ul>

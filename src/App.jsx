@@ -14,9 +14,9 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/headphones/:id" element={<Headphone />} />
-          <Route path="/speakers/:id" element={<Speaker />} />
-          <Route path="/earphones:id" element={<Earphone />} />
+          <Route path="/headphones/" element={<Headphone />} />
+          <Route path="/speakers/" element={<Speaker />} />
+          <Route path="/earphones/" element={<Earphone />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -2,14 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-// import ProductProvider  from '.Context/ProductContext';
+// import ProviderProvider from '../Context/ProductContext.jsx'
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <ProductProvider>
+  // <ProviderProvider>
     <React.StrictMode>
       <App />
     </React.StrictMode>
-  // </ProductProvider>
+  // {/* </ProviderProvider> */}
 );
   

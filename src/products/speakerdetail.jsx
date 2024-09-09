@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function speakerdetail() {
+export default function Speakerdetail() {
   return (
     <div>speakerdetail</div>
   )

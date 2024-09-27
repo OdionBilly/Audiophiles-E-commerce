@@ -92,7 +92,7 @@
     "id": 2,
     "slug": "xx59-headphones",
     "name": "XX59 Headphones",
-    "image": "",
+    "image": "/src/assets/product-xx59-headphones/mobile/image-product.jpg",
     "data": {
       "mobile": "/src/assets/product-xx59-headphones/mobile/image-product.jpg",
       "tablet": "/src/assets/product-xx59-headphones/tablet/image-product.jpg",

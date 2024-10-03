@@ -8,7 +8,7 @@ import { Cartegory_1 } from '../components/Cartegory-1';
 
 
 
-export default function Headphone() {
+const Headphone = () => {
   const headphones = ProductData.filter(
     (headphones) => headphones.category === "headphones"
   );
@@ -36,7 +36,7 @@ export default function Headphone() {
                 </div>
 
                 <div className="py-2 xl:mt-[60px] max-sm:text-center md:text-center xl:text-left ">
-                  <h1 className="text-[orange] font-extralight pb-2">
+                  <h1 className="text-[#D87D4A] font-extralight pb-2">
                     NEW PRODUCT
                   </h1>
 
@@ -47,8 +47,8 @@ export default function Headphone() {
                     {headphone.description}
                   </p>
                   <Link
-                    to={`/${headphone.id} `}
-                    className="bg-orange-400 hover:bg-orange-300 text-white font-medium rounded-sm shadow py-2 px-4 transition duration-300 ease-in-out"
+                    to={`/headphones/${headphone.id}`}
+                    className="bg-[#D87D4A] hover:bg-orange-300 text-white font-medium rounded-sm shadow py-2 px-4 transition duration-300 ease-in-out"
                   >
                     See Product
                   </Link>
@@ -64,3 +64,4 @@ export default function Headphone() {
     </div>
   );
 }
+export default Headphone

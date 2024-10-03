@@ -1,19 +1,60 @@
-import React from 'react'
-// import {useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-// import data from '../data.json'
-import Headphone from './Headphone';
+import React from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import ProductData from "../data.json";
+import Headphone from "./Headphone";
 
 export const ProductDetails = () => {
-    const {Id } = useParams ();
-    console.log(Id);
+  const { headphoneId } = useParams();
 
+  const [headphone, setHeadphone] = useState(null);
+
+  const [quantity, setQuantity] = useState(0);
+
+  // function for increase of product quantity
+
+  useEffect(() => {
+    const foundProduct = ProductData.find(
+      (item) => item.id === parseInt(headphoneId, 10)
+    );
+    setHeadphone(foundProduct);
+  }, [headphoneId]);
+
+  console.log(headphone);
+
+  if (!headphone) {
+    return <div>loading</div>;
+  }
 
   return (
     <div>
-        <h1>Product Details</h1>
-        
+      <h1 className="px-12 xl:px-[110px] p-2 xlp-4">go back</h1>
+      <div className="w-full max-sm:px-6 md:px-12 xl:px-[110px] flex max-sm:flex-col gap-10 xl:gap-[80px] mb-10  ">
+        <div>
+          <img
+            src={headphone.image}
+            alt=""
+            className="max-sm:w-[327px] max-sm:h-[337px] md:w-[281px] md:h-[481px] xl:w-[540px] xl:h-[560px]"
+          />
+        </div>
+        <div className="w-[327px] py-1 max-sm:mt-2 md:mt-10 xl:mt-[80px] mb-4 ">
+          <h1 className="font-extralight text-[orange] mb-2">New Product</h1>
+          <h1 className="max-sm:leading-8 md:leading-10 xl:leading-10 uppercase font-primarybold max-sm:text-[28px] text-[40px] mb-4">
+            {headphone.name}
+          </h1>
+          <p className="w-[327px] xl:w-[445px] font-primaryregular mb-2">
+            {headphone.description}
+          </p>
+          <p className="text-[19px] pb-5"> $ {headphone.price}</p>
 
+          <div className="gap-2 flex">
+            <button className=" bg-gray-400 w-[100px] py-2 ">{quantity} {quantity} {quantity}</button>
+            <button className="bg-[#D87D4A] hover:bg-[#c8855f] text-white text-[16px] py-2 px-4">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};

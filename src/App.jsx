@@ -6,6 +6,7 @@ import Speaker from "./Pages/Speaker";
 import Earphone from "./Pages/Earphone";
 import Nav from "./components/Nav";
 import { ProductDetails } from "./Pages/ProductDetails";
+import Headphonesdetail from "./products/Headphonesdetail";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
           <Route path="/headphones/" element={<Headphone />} />
           <Route path="/speakers/" element={<Speaker />} />
           <Route path="/earphones/" element={<Earphone />} />
-          <Route path="headphone.id" element={<ProductDetails />} />
+          <Route path="/headphones/:headphoneId" element={<ProductDetails />} />
+          {/* <Route path="headphones/" element={<Headphonesdetail/>}/> */}
         </Routes>
         <Footer />
       </BrowserRouter>

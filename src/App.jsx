@@ -6,7 +6,8 @@ import Speaker from "./Pages/Speaker";
 import Earphone from "./Pages/Earphone";
 import Nav from "./components/Nav";
 import { ProductDetails } from "./Pages/ProductDetails";
-import Headphonesdetail from "./products/Headphonesdetail";
+import Speakerdetail from "./products/Speakerdetail";
+import Earphonedetail from './products/Earphonedetail';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Route path="/speakers/" element={<Speaker />} />
           <Route path="/earphones/" element={<Earphone />} />
           <Route path="/headphones/:headphoneId" element={<ProductDetails />} />
-          {/* <Route path="headphones/" element={<Headphonesdetail/>}/> */}
+          <Route path="/speakers/:speakerId" element={<Speakerdetail/>}/>
+          <Route path="/earphones/:earphoneId" element={<Earphonedetail/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>

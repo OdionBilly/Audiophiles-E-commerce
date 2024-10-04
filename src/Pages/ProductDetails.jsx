@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ProductData from "../data.json";
+import { BsPlus, BsDash } from "react-icons/bs";
 import Headphone from "./Headphone";
 
 export const ProductDetails = () => {
@@ -12,6 +14,14 @@ export const ProductDetails = () => {
   const [quantity, setQuantity] = useState(0);
 
   // function for increase of product quantity
+  const increaseQuantity = () => {
+    setQuantity(prevQuantity => prevQuantity + 1)
+  }
+
+  // funxtion for decreamant of product
+  const decreaseQuantity = () => {
+    setQuantity(prevQuantity => (prevQuantity > 0 ? prevQuantity - 1 : 0));
+  }
 
   useEffect(() => {
     const foundProduct = ProductData.find(
@@ -20,7 +30,7 @@ export const ProductDetails = () => {
     setHeadphone(foundProduct);
   }, [headphoneId]);
 
-  console.log(headphone);
+  // console.log(headphone);
 
   if (!headphone) {
     return <div>loading</div>;
@@ -28,7 +38,9 @@ export const ProductDetails = () => {
 
   return (
     <div>
-      <h1 className="px-12 xl:px-[110px] p-2 xlp-4">go back</h1>
+      <Link to={`/headphones`}>
+        <h1 className="px-12 xl:px-[110px] p-2 xlp-4">Go Back</h1>
+      </Link>
       <div className="w-full max-sm:px-6 md:px-12 xl:px-[110px] flex max-sm:flex-col gap-10 xl:gap-[80px] mb-10  ">
         <div>
           <img
@@ -38,7 +50,7 @@ export const ProductDetails = () => {
           />
         </div>
         <div className="w-[327px] py-1 max-sm:mt-2 md:mt-10 xl:mt-[80px] mb-4 ">
-          <h1 className="font-extralight text-[orange] mb-2">New Product</h1>
+          <h1 className="font-extralight text-[#D87D4A] mb-2">New Product</h1>
           <h1 className="max-sm:leading-8 md:leading-10 xl:leading-10 uppercase font-primarybold max-sm:text-[28px] text-[40px] mb-4">
             {headphone.name}
           </h1>
@@ -47,9 +59,20 @@ export const ProductDetails = () => {
           </p>
           <p className="text-[19px] pb-5"> $ {headphone.price}</p>
 
+          {/* button for increase */}
           <div className="gap-2 flex">
-            <button className=" bg-gray-400 w-[100px] py-2 ">{quantity} {quantity} {quantity}</button>
-            <button className="bg-[#D87D4A] hover:bg-[#c8855f] text-white text-[16px] py-2 px-4">
+            <div className="flex justify-between items-center w-[80px] bg-gray-300">
+              <div onClick={decreaseQuantity} className="px-1">
+                {" "}
+                {<BsDash />}
+              </div>
+              <div>{quantity}</div>
+              <div onClick={increaseQuantity} className="px-1">
+                {" "}
+                {<BsPlus />}
+              </div>
+            </div>
+            <button className="bg-[#D87D4A] hover:bg-[#c8855f] text-white font-primaryregular text-[16px] py-2 px-4 cursor-pointer">
               ADD TO CART
             </button>
           </div>

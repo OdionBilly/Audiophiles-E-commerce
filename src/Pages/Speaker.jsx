@@ -26,36 +26,36 @@ export default function Speaker({}) {
       </h1>
 
       <div>
-        {speakers.map((speakers, index) => {
+        {speakers.map((speaker, index) => {
           return (
             <div
               key={index}
-              className={`xl:p-[100px] flex max-sm:flex-col md:flex-col xl:gap-[100px] items-center ${
+              className={`xl:p-[80px] flex max-sm:flex-col md:flex-col xl:gap-[100px] items-center ${
                 index % 2 === 1 ? "xl:flex-row-reverse" : "xl:flex-row"
               }`}
             >
-              <div className="flex flex-col xl:flex-row  mt-10 ">
+              <div className="flex flex-col xl:flex-row mt-10 ">
                 <img
                   className=" xl:size-[450px] mx-12"
-                  src={speakers.categoryImage.mobile}
+                  src={speaker.categoryImage.mobile}
                   alt=""
                 />
               </div>
 
               <div className="max-sm:w-[320px] xl:w-[445px] max-sm:text-center md:text-center  xl:text-left mt-5 ">
-                <h1 className="text-[orange] font-extralight pb-2">
+                <h1 className="text-[#D87D4A] font-extralight pb-2">
                   NEW PRODUCT
                 </h1>
 
                 <h1 className=" max-sm:ml-10 max-md:w-[250px] xl:w-[400px] max-sm:leading-9 md:leading-8 xl:eading-9 text-[29px] xl:text-[40px] font-primaryextrabold ">
-                  {speakers.name}
+                  {speaker.name}
                 </h1>
                 <p className="sm:w-[320px] xl:w-[445px] py-5 text-[15px] font-primarymedium ">
-                  {speakers.description}
+                  {speaker.description}
                 </p>
 
                 <Link
-                  to={`/${speakers.id}`}
+                  to={`/speakers/${speaker.id}`}
                   className="py-2 px-4 text-[#fff] bg-[#D87D4A] hover:bg-[#D87d4A]"
                 >
                   See Product

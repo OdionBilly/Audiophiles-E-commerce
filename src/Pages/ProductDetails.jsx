@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import ProductData from "../data.json";
 import { BsPlus, BsDash } from "react-icons/bs";
 import Headphone from "./Headphone";
+import Cart from "../components/Cart";
 
 export const ProductDetails = () => {
   const { headphoneId } = useParams();
@@ -78,6 +79,7 @@ export const ProductDetails = () => {
           </div>
         </div>
       </div>
+      <Cart/>
     </div>
   );
 };

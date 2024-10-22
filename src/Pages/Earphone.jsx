@@ -9,16 +9,13 @@ export default function Earphone() {
 
   const earphones = ProductData.filter(
     (earphones) => earphones.category === 'earphones');
-    
-    
-
-
-
 
   return (
     <div>
-      <h1 className='text-center text-[25px] font-primaryextrabold text-[#fff] bg-[#151515] pb-4'>EARPHONES</h1>
-      <div className='px-4 md:px-12 xl:px-[110px]'>
+      <h1 className="text-center text-[25px] font-primaryextrabold text-[#fff] bg-[#151515] pb-4">
+        EARPHONES
+      </h1>
+      <div className="px-4 md:px-12 xl:px-[110px]">
         {earphones.map((earphone, index) => {
           return (
             <div
@@ -40,24 +37,27 @@ export default function Earphone() {
                 <h1 className="w-[300px] leading-8 xl:leading-10 font-primarybold uppercase max-sm:text-[28px] text-[40px]">
                   {earphone.name}
                 </h1>
-                <p className="xl:w-[440px] mt-3 mb-3 font-primaryregular">{earphone.description}</p>
-                <Link to={`/earphones/${earphone.id}`}
+                <p className="xl:w-[440px] mt-3 mb-3 font-primaryregular">
+                  {earphone.description}
+                </p>
+                <Link
+                  to={`/earphones/${earphone.id}`}
                   className="px-4 py-2 bg-[#D87D4A] hover:bg-[#cc8359] text-[#fff]
-                  font-primaryregular"> SEE PRODUCT
+                  font-primaryregular"
+                >
+                  {" "}
+                  SEE PRODUCT
                 </Link>
               </div>
             </div>
           );
-        })
-
-        }
-
+        })}
       </div>
 
-
-      <Cartegory_1/>
-      <Cartegory_2/>
-        
+      <div className='xl:ml-10'>
+        <Cartegory_1 />
+      </div>
+      <Cartegory_2 />
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import heroimage from '../Bgimage/Bitmap-bg-mobile.png'
 import tabletimage from '../Bgimage/Bitmap-bg-Tablet.png'
 import desktop from '../Bgimage/Bitmap-bg-mobile.png'

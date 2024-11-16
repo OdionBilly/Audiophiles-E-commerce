@@ -1,8 +1,7 @@
-import React from 'react'
 import { FiShoppingCart } from "react-icons/fi";
 import { HiMenu } from "react-icons/hi";
 import { NavLink } from 'react-router-dom';
-import Hero from './Hero';
+// import Hero from './Hero';
 
 export default function Nav() {
   return (

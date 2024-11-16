@@ -1,4 +1,3 @@
-import React from 'react'
 import bitmapB from "../mobile-image/mobile-BitmapB.png";
 import bitmapc from "../mobile-image/Bitmap-b-tablet.png";
 import bitmapd from "../mobile-image/Bitmap-2.png";

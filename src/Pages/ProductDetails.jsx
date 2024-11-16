@@ -1,10 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ProductData from "../data.json";
 import { BsPlus, BsDash } from "react-icons/bs";
-import Headphone from "./Headphone";
+// import Headphone from "./Headphone";
 import Cart from "../components/Cart";
 
 export const ProductDetails = () => {

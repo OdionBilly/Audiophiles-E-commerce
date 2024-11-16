@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import headset from '../mobile-image/Group 6.png'
 import speaker from '../mobile-image/Group 7.png'

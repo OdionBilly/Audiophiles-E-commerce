@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { BsFacebook , BsTwitter , BsInstagram} from 'react-icons/bs'
 
@@ -56,7 +55,7 @@ export default function Footer() {
       <div className="">
         <div className="lg:ml-[1px]">
           <p className="text-[15px] text-center py-6 font-thin px-8 md:text-left md:pl-[10px] md:w-[689px] md:mt-8 lg:px-[8%] lg:ml-[-90px]">
-            Audiophile is an all in one stop to fulfill your audio needs. We're
+            Audiophile is an all in one stop to fulfill your audio needs. We re
             a small team of music lovers and sound specialists who are devoted
             to helping you get the most out of personal audio. Come and visit
             our demo facility - we’re open 7 days a week.

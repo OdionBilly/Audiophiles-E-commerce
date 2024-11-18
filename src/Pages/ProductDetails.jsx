@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -5,6 +6,7 @@ import ProductData from "../data.json";
 import { BsPlus, BsDash } from "react-icons/bs";
 // import Headphone from "./Headphone";
 import Cart from "../components/Cart";
+// import Cartitem from "../components/Cartitem";
 
 export const ProductDetails = () => {
   const { headphoneId } = useParams();
@@ -30,9 +32,9 @@ export const ProductDetails = () => {
     setHeadphone(foundProduct);
   }, [headphoneId]);
 
-  // console.log(headphone);
+  console.log(headphoneId);
 
-  if (!headphone) {
+  if (!headphone) { 
     return <div>loading</div>;
   }
 
@@ -78,6 +80,7 @@ export const ProductDetails = () => {
           </div>
         </div>
       </div>
+      {/* <Cartitem product={product} quantity={quantity} /> */}
       <Cart/>
     </div>
   );

@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import ProductData from "../data.json";
 import { BsPlus, BsDash } from "react-icons/bs";
 // import Headphone from "./Headphone";
-import Cart from "../components/Cart";
+import Bottom from "../components/Bottom";
 
 export const ProductDetails = () => {
 
@@ -79,7 +79,7 @@ export const ProductDetails = () => {
         </div>
       </div>
       {/* <Cartitem product={product} quantity={quantity} /> */}
-      <Cart/>
+      <Bottom/>
     </div>
   );
 };

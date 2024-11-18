@@ -1,12 +1,12 @@
 // import React from 'react'
-import Cart from '../components/Cart'
+import Bottom from '../components/Bottom'
 import Hero from '../components/Hero'
 
 export default function Home() {
   return (
     <div>
         <Hero/>
-        <Cart/>
+        <Bottom/>
     </div>
   )
 }

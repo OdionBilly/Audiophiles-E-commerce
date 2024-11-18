@@ -4,7 +4,8 @@ import { useParams } from 'react-router-dom'
 import {useState, useEffect } from 'react'
 import ProductData from '../data.json'
 import { BsPlus, BsDash } from 'react-icons/bs'
-import Cart from '../components/Cart'
+import Bottom from '../components/Bottom'
+// import { GrBottomCorner } from 'react-icons/gr'
 
 
 
@@ -84,7 +85,7 @@ export default function Earphonedetail() {
         </div>
       </div>
 
-      <Cart/>
+      <Bottom/>
     </div>
   );
 }

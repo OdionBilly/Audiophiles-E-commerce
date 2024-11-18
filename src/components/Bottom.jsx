@@ -11,7 +11,7 @@ import bitmapB from '../mobile-image/mobile-BitmapB.png'
 import bitmapc from '../mobile-image/Bitmap-b-tablet.png'
 import bitmapd from '../mobile-image/Bitmap-2.png'
 
-export default function Cart() {
+export default function Bottom() {
 
   const navigate = useNavigate()
 

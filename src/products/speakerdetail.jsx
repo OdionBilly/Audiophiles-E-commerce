@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import ProductData from '../data.json'
 import { BsPlus, BsDash } from 'react-icons/bs';
-import Cart from '../components/Cart';
+import Bottom from '../components/Bottom';
 
 
 export default function Speakerdetail() {
@@ -85,7 +85,7 @@ export default function Speakerdetail() {
         </div>
       </div>
 
-      <Cart/>
+      <Bottom/>
     </div>
   );
 }

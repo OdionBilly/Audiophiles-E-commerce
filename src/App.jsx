@@ -62,7 +62,7 @@ function App() {
          
          /> 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/headphones/" element={<Headphone />} />
           <Route path="/speakers/" element={<Speaker />} />
           <Route path="/earphones/" element={<Earphone />} />

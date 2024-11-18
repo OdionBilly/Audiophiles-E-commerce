@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { Cartegory_1 } from '../components/Cartegory-1'
 import { Cartegory_2 } from '../components/Cartegory-2'
 import ProductData from '../data.json'

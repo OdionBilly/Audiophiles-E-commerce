@@ -6,13 +6,11 @@ import ProductData from "../data.json";
 import { BsPlus, BsDash } from "react-icons/bs";
 // import Headphone from "./Headphone";
 import Cart from "../components/Cart";
-// import Cartitem from "../components/Cartitem";
 
 export const ProductDetails = () => {
+
   const { headphoneId } = useParams();
-
   const [headphone, setHeadphone] = useState(null);
-
   const [quantity, setQuantity] = useState(0);
 
   // function for increase of product quantity
@@ -32,7 +30,7 @@ export const ProductDetails = () => {
     setHeadphone(foundProduct);
   }, [headphoneId]);
 
-  console.log(headphoneId);
+  // console.log(headphoneId);
 
   if (!headphone) { 
     return <div>loading</div>;

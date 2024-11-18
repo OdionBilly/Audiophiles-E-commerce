@@ -3,7 +3,6 @@ import productData from "../data.json";
 import { Link } from "react-router-dom";
 import { Cartegory_1 } from "../components/Cartegory-1";
 import { Cartegory_2 } from "../components/Cartegory-2";
-// import { HiMenu } from "react-icons/hi";
 
 export default function Speaker() {
   const speakers = productData.filter(
@@ -55,7 +54,7 @@ export default function Speaker() {
                 </p>
 
                 <Link
-                  to={`/speakers/${speaker.id}`}
+                  to={`/Speakers/${speaker.id}`}
                   className="py-2 px-4 text-[#fff] bg-[#D87D4A] hover:bg-[#D87d4A]"
                 >
                   See Product

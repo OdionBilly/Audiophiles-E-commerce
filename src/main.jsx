@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 // import ProviderProvider from '../Context/ProductContext.jsx'
+// import CartProvider from './Context/CartContext.jsx'
+// import { CartProvider } from './Context/CartContext.jsx'
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <ProviderProvider>
+
+  // <CartProvider>
     <React.StrictMode>
       <App />
     </React.StrictMode>
-  // {/* </ProviderProvider> */}
+  //  </CartProvider>
 );
   

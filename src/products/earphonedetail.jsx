@@ -1,4 +1,5 @@
-// import React from 'react'
+// import React from 'react'\
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import {useState, useEffect } from 'react'
@@ -9,7 +10,7 @@ import Bottom from '../components/Bottom'
 
 
 
-export default function Earphonedetail() {
+export default function Earphonedetail({addToCart}) {
 
   const {earphoneId} = useParams();
   const [earphone, setEarphone] = useState(null);
@@ -27,6 +28,19 @@ export default function Earphonedetail() {
     }
   }
 
+  // handle cart
+  const handleAddToCart = () => {
+    if(quantity > 0 && earphone) {
+      addToCart({
+        id: earphone.id,
+        name: earphone.name,
+        price: earphone.price,
+        quantity: quantity,
+        image: earphone.image
+      });
+      setQuantity(0);
+    }
+  }
 
   useEffect(() => {
     const foundProduct = ProductData.find(
@@ -78,7 +92,9 @@ export default function Earphonedetail() {
               </div>
             </div>
 
-            <button className=" bg-[#D87D4A] hover:bg-[#ec9867] text-[#fff] px-4 py-2">
+            <button
+            onClick={handleAddToCart}
+             className=" bg-[#D87D4A] hover:bg-[#ec9867] text-[#fff] px-4 py-2">
               ADD TO CART
             </button>
           </div>
@@ -88,4 +104,11 @@ export default function Earphonedetail() {
       <Bottom/>
     </div>
   );
+
+ 
 }
+Earphonedetail.propTypes = {
+  addToCart: PropTypes.func.isRequired,
+}
+
+

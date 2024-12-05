@@ -1,4 +1,5 @@
 // import React from 'react'
+import PropTypes from 'prop-types';
 import { useParams , } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
@@ -7,7 +8,7 @@ import { BsPlus, BsDash } from 'react-icons/bs';
 import Bottom from '../components/Bottom';
 
 
-export default function Speakerdetail() {
+export default function Speakerdetail({addToCart}) {
  
   const { speakerId } = useParams();
   const [speaker, setSpeaker] = useState (null);
@@ -35,6 +36,20 @@ export default function Speakerdetail() {
   },[speakerId])
 
   // console.log(speaker)
+
+  // handle cart
+  const handleAddToCart = () => {
+    if(quantity > 0 && speaker) {
+      addToCart({
+        id: speaker.id,
+        name: speaker.name,
+        price: speaker.price,
+        quantity: quantity,
+        image: speaker.image
+        });
+      setQuantity(0);
+    }
+  }
 
   if(!speaker) {
     return <div>Loading...</div>
@@ -78,7 +93,9 @@ export default function Speakerdetail() {
                 {<BsDash />}
               </div>
             </div>
-            <button className="px-4 py-2 bg-[#D87D4A] hover:bg-[#dc8e61] text-[15px] text-[#fff]">
+            <button 
+            onClick={handleAddToCart}
+            className="px-4 py-2 bg-[#D87D4A] hover:bg-[#dc8e61] text-[15px] text-[#fff]">
               ADD TO CART
             </button>
           </div>
@@ -88,4 +105,7 @@ export default function Speakerdetail() {
       <Bottom/>
     </div>
   );
+}
+Speakerdetail.propTypes = {
+  addToCart: PropTypes.func.isRequired,
 }

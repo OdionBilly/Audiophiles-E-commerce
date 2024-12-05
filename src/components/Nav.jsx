@@ -1,10 +1,28 @@
-// import useState from "react";
-import { FiShoppingCart } from "react-icons/fi";
+import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { NavLink } from 'react-router-dom';
+import { FiShoppingCart } from "react-icons/fi"
+
+// import ShoppingCart from './ShoppingCart';
 // import Hero from './Hero';
 
-const  Nav = () => {
+const  Nav = ({toggleQuantity,removeItem,clearCart,cartItems}) => { 
+
+  const [cartOpen, setCartOpen] = useState(false)
+
+// console.log(cartOpen)
+
+
+
+  const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0)
+  const totalPrice = cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0);
+
+
+
+
+  const toggleCart = () => {
+    setCartOpen(!cartOpen);
+};
 
 
   return (
@@ -58,15 +76,34 @@ const  Nav = () => {
               </NavLink>
             </ul>
           </div>
-          <div className="cursor-pointer">
-            <FiShoppingCart/>
-          </div>
+          <div
+             className=" relative cursor-pointer">
+            <FiShoppingCart onClick={toggleCart}/>
+            {totalItems > 0 && (
+              <div className="absolute top-0 right-0  w-3 h-[2px] rounded-full flex justify-center items-center text-lg cursor-pointer  ">
+                {totalItems}
+              </div>
+            )}
 
+
+           {/* <ShoppingCart 
+             onclick={toggleCart}
+              clearCart={clearCart}
+              toggleQuantity={toggleQuantity}
+              removeItem={removeItem}
+              cartItems={cartItems}
+             /> */}
+          </div>
         </nav>
       </header>
 
-
-  
+      {cartOpen && (
+        <div>
+          <div className="relative">
+            <button className="abolsute top-0 right-0 text-[gray]"> &items</button>
+          </div>
+        </div>
+      )}
     </div>
     )
 };

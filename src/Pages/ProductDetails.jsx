@@ -1,4 +1,6 @@
 // import React from 'react';
+
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -6,12 +8,37 @@ import ProductData from "../data.json";
 import { BsPlus, BsDash } from "react-icons/bs";
 // import Headphone from "./Headphone";
 import Bottom from "../components/Bottom";
+// import Cart from "../components/Cart";
 
-export const ProductDetails = () => {
+export const ProductDetails = ({addToCart}) => {
 
   const { headphoneId } = useParams();
   const [headphone, setHeadphone] = useState(null);
   const [quantity, setQuantity] = useState(0);
+  // const [cart, setCart] = useState([]);
+
+
+  // function to add product to cart
+  // const addToCart = () => {
+  //   const existingProduct = cart.find((item) => item.id === headphone.id);
+  //   if (existingProduct) {
+  //     existingProduct.quantity += quantity;
+  //   } else {
+  //     setCart((prevCart) => [...prevCart, { ...headphone, quantity }]);
+  //   }
+  // };
+  const handleAddToCart = () => {
+    if(quantity > 0 && headphone) {
+      addToCart({
+        id: headphone.id,
+        name: headphone.name,
+        price: headphone.price,
+        quantity: quantity,
+        image: headphone.image
+      });
+      setQuantity(0);
+    }
+  }
 
   // function for increase of product quantity
   const increaseQuantity = () => {
@@ -29,6 +56,8 @@ export const ProductDetails = () => {
     );
     setHeadphone(foundProduct);
   }, [headphoneId]);
+
+
 
   // console.log(headphoneId);
 
@@ -72,14 +101,22 @@ export const ProductDetails = () => {
                 {<BsPlus />}
               </div>
             </div>
-            <button className="bg-[#D87D4A] hover:bg-[#c8855f] text-white font-primaryregular text-[16px] py-2 px-4 cursor-pointer">
+            <button className="bg-[#D87D4A] hover:bg-[#c8855f] text-white font-primaryregular text-[16px] py-2 px-4 cursor-pointer"
+            onClick={handleAddToCart}>
               ADD TO CART
             </button>
           </div>
         </div>
       </div>
       {/* <Cartitem product={product} quantity={quantity} /> */}
+      {/* <Cart
+       product={headphone}
+        quantity={quantity} /> */}
+  
       <Bottom/>
     </div>
   );
+};
+ProductDetails.propTypes = {
+  addToCart: PropTypes.func.isRequired,
 };

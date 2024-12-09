@@ -30,9 +30,10 @@ const Headphone = () => {
                 <div className="sm:size-[250px] md:size-[389px]  xl:size-[450px]">
                   <img
                     className=""
-                    src={headphone.image}
+                    src={headphone.categoryImage.desktop}
                     alt={headphone.name}
                   />
+
                 </div>
 
                 <div className="py-2 xl:mt-[60px] max-sm:text-center md:text-center xl:text-left ">
@@ -56,6 +57,7 @@ const Headphone = () => {
               </div>
             );
           })}
+
         </div>
       </div>
       <Cartegory_1 />

@@ -5,7 +5,9 @@ import { useParams } from 'react-router-dom'
 import {useState, useEffect } from 'react'
 import ProductData from '../data.json'
 import { BsPlus, BsDash } from 'react-icons/bs'
+// import Others from '../components/Others'
 import Bottom from '../components/Bottom'
+import { Others } from '../components/Others';
 // import { GrBottomCorner } from 'react-icons/gr'
 
 
@@ -63,7 +65,7 @@ export default function Earphonedetail({addToCart}) {
       <div className="px-6 md:px-12p xl:px-[110px] flex max-md:flex-col md:gap-[60px] xl:gap-10">
         <div>
           <img
-            src={earphone.image.mobile}
+            src={earphone.categoryImage.mobile}
             alt={earphone.name}
             className="max-md:w-[381px] md:h-[481px] xl:w-[540px] xl:h-[560px]"
           />
@@ -100,6 +102,44 @@ export default function Earphonedetail({addToCart}) {
           </div>
         </div>
       </div>
+
+      {/* Feature */}
+      <div className='flex max-sm:flex-col sm:flex-col xl:flex-row'>
+          <div className='py-10 max-sm:px-5 sm:px-10 xl:px-[190px]'>
+             <h1 className='font-primaryextrabold max-sm:text-[25px] xl:text-[30px]'>FEATURES</h1>
+             <p className='xl:w-[550px] py-4 text-[#797777]'>{earphone.features}</p>
+          </div> 
+
+          <div className='py-10 max-sm:px-5 sm:px-10 xl:px-[10px] flex max-sm:gap-0 sm:gap-[250px] xl:gap-0 max-sm:flex-col sm:flex-row xl:flex-col'>
+            <h1 className='font-primaryextrabold max-sm:text-[25px] xl:text-[30px]'>IN THE BOX</h1>
+            <div className='text-[#797777]'>
+             <p> <span className='text-[rgb(235,144,48)] '>
+                 {earphone.includes[0].quantity}x </span>  
+                 {earphone.includes[0].item}</p>
+             <p><span className='text-[rgb(235,144,48)]'> {earphone.includes[1].quantity}x </span>
+                 {earphone.includes[1].item}
+             </p>
+             <p><span className='text-[rgb(235,144,48)]'>{earphone.includes[2].quantity}x </span> {earphone.includes[2].item}</p>
+             <p><span className='text-[rgb(235,144,48)]'> {earphone.includes[3].quantity}x </span>  {earphone.includes[3].item}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Gallery section */}
+        <div className=' max-sm:px-5 sm:px-10 xl:px-[190px] relative flex max-sm:flex-col sm:flex-col xl:flex-col'>
+          <div className=''>
+            <img src={earphone.gallery.first.desktop} alt=""className='sm:w-[277px] xl:w-[445px]' />
+          </div>
+          <div className=' max-sm:py-4 sm:py-6 xl:py-8'>
+            <img src={earphone.gallery.second.desktop} alt="pics"className='sm:w-[277px] xl:w-[445px]' />
+          </div>
+          <div className='sm:absolute sm:top-0 sm:right-[35px] xl:absolute xl:top-0 xl:right-[157px]'>
+            <img src={earphone.gallery.third.desktop} alt="" className='sm:w-[395px] xl:w-[635px]' />
+          </div>
+        </div>
+
+        
+         <Others earphone={earphone}/>
 
       <Bottom/>
     </div>

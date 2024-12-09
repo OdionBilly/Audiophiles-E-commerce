@@ -36,7 +36,7 @@ export default function Speaker() {
               <div className="flex flex-col xl:flex-row mt-10 ">
                 <img
                   className=" xl:size-[450px] mx-12"
-                  src={speaker.categoryImage.mobile}
+                  src={speaker.categoryImage.desktop}
                   alt=""
                 />
               </div>

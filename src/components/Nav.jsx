@@ -110,7 +110,6 @@ const  Nav = ({toggleQuantity,removeItem,clearCart,cartItems}) => {
                    <h1>Cart ({totalItems})</h1>
                    <button className="text-[gray]" onClick={clearCart}>Remove all</button>
                 </div>
-
                 <div className="px-4 py-4">
                   {cartItems.map(item => (
                     <div key={item.id}>
@@ -127,9 +126,11 @@ const  Nav = ({toggleQuantity,removeItem,clearCart,cartItems}) => {
                           <button onClick={() => toggleQuantity(item.id, + 1)}>+</button>
                         </div>
                       </div>
+                           {/* <button className="mx-auto text-right text-[20px] pr-4 mt-0 text-[red] cursor-pointer" onClick={removeItem}>X</button> */}
                      </div>
                   ))}
                 </div>
+
               </div>
 
               {/* total */}
@@ -139,11 +140,11 @@ const  Nav = ({toggleQuantity,removeItem,clearCart,cartItems}) => {
               </div>
 
               {/* link to checkout */}
-              <Link to="/checkout">
+              <NavLink to="/checkout">
                 <div className="flex items-center justify-center px-4 py-4">
                   <button className="w-full bg-[#D87D4A] py-[15px] text-center text-[#fff]">Checkout</button>
                 </div>
-              </Link>
+              </NavLink>
             </div>  
           </div>
         </div>

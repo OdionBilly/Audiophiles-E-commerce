@@ -9,6 +9,7 @@ import Nav from "./components/Nav";
 import { ProductDetails } from "./Pages/ProductDetails";
 import Speakerdetail from "./products/Speakerdetail";
 import Earphonedetail from './products/Earphonedetail';
+import Checkout from "./components/Checkout";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -64,6 +65,7 @@ function App() {
           <Route path="/headphones/:headphoneId" element={<ProductDetails addToCart={addToCart}/>} />
           <Route path="/speakers/:speakerId" element={<Speakerdetail addToCart={addToCart}/>}/>
           <Route path="/earphones/:earphoneId" element={<Earphonedetail addToCart={addToCart}/>}/>
+          <Route path="/Checkout"element={<Checkout cartItems={cartItems}/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -9,7 +9,7 @@ import Nav from "./components/Nav";
 import { ProductDetails } from "./Pages/ProductDetails";
 import Speakerdetail from "./products/Speakerdetail";
 import Earphonedetail from './products/Earphonedetail';
-// import Checkout from "./components/Checkout";
+import Checkout from "./components/Checkout";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);

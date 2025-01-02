@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react"
 import countryList from 'country-list'
+import CartItemSummary from "./CartItemSummary";
 
 const countries = countryList.getData();
 
@@ -15,7 +16,7 @@ const Checkout = ({cartItems}) => {
         address: '',
         zip: '',
         city: '',
-        country: 'united Kingdom',
+        country: '',
         paymentMethod : '',
         emoneypin: '',
         emoneynumber: '',
@@ -32,17 +33,21 @@ const Checkout = ({cartItems}) => {
         const [showPopup, setShowPopup] = useState();
         const [popupMessage, setPopupMessage] = useState('');
 
+        // console.log(popupMessage);
+
         useEffect(()=>{
             const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
             const vat = subtotal * 0.15;
+            const shipping = 10;
             const grandTotal = subtotal + summary.shipping + vat;
             setSummary({
                 ...summary, 
                 subtotal,
                 vat,
+                shipping,
                 grandTotal,
             });
-        }, [cartItems])
+        }, [cartItems, summary])
 
 
         const handleChange = (e) => {
@@ -68,6 +73,8 @@ const Checkout = ({cartItems}) => {
             });
           };
 
+        
+
           const handleSubmit = () => {
             if (
               form.Name &&
@@ -76,11 +83,12 @@ const Checkout = ({cartItems}) => {
               form.address &&
               form.zip &&
               form.city &&
-              form.country &&
-              (form.paymentMethod === 'e-Money' ? form.emoneyNumber && form.emoneyPin : true)
+              // form.country &&
+              (form.paymentMethod === 'e-Money' ? form.emoneynumber && form.emoneypin : true)
             ) {
               setPopupMessage('Order success');
               setShowPopup(true);
+              
             } else {
               setPopupMessage('Please enter billing details');
               setShowPopup(true);
@@ -169,10 +177,17 @@ const Checkout = ({cartItems}) => {
                     <div className="mt-10">
                         <label htmlFor="" className=" mb-2">country</label>
                         <select
-                        option={countryOptions}
-                        value={{label:form.country, value:form.country}}
-                        onChange={handleCountryChange}
-                        />
+                          // options= {countryOptions}
+                          value={form.country}
+                          // value={ {value:form.country }}
+                          onChange={handleCountryChange}
+                          >
+                           {countryOptions.map((option) => (
+                            <option key={option.value} value={option.value}>
+                             {option.label}
+                            </option>
+                           ))}
+                           </select>
                         {/* <input type="text" name="" className="py-5 px-5 border-2 w-[309px]" /> */}
                     </div>
                 </div>
@@ -188,11 +203,11 @@ const Checkout = ({cartItems}) => {
                          <input 
                          type="radio" 
                          name="paymentMethod" 
-                         value="E.money"
-                         checked={form.paymentMethod ==="E.money"}
+                         value="e-money"
+                         checked={form.paymentMethod ==="e-money"}
                          onChange={handlePaymentMethodChange}
                          className="w-5" />
-                         <label htmlFor=""className="ml-5">E.money</label>
+                         <label htmlFor=""className="ml-5">E-money</label>
                        </div>
                        <div className="border-2 py-5 px-5 w-[300px] mt-[30px]"> 
                          <input type="radio" 
@@ -210,18 +225,18 @@ const Checkout = ({cartItems}) => {
                     <div className="">
                      <label htmlFor="" className=" block mb-2">e.Money Number</label>
                      <input
-                      type="number"name="name"
-                      value={form.eMoneyNumber}
+                      type="number"name="emoneynumber"
+                      value={form.emoneynumber}
                       onChange={handleChange}
                       className=" px-5 py-4 border-2 w-[309px]"/>
                     </div>
                     <div>
                       <label htmlFor="" className=" block mb-2 px-3">e-Money PIN</label>
                       <input 
-                      type="number"name="name" 
-                      value={form.eMoneyPin}
+                      type="number"name="emoneypin" 
+                      value={form.emoneypin}
                       onChange={handleChange}
-                      className="px-5 py-4 border-2  w-[309px]" />
+                      className="px-5 py-4 border-2  w-[309px]"/>
                     </div>
                 </div>
             </div>
@@ -271,12 +286,17 @@ const Checkout = ({cartItems}) => {
               </div>
             </div>
 
-            <div>
+            <div className="">
               {showPopup && (
-                <div>
-                  <div>
-                    <h1>Payment Status</h1>
+                <div className="w-[100%] px-[180px] fixed top-0 left-0 h-full flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
+                  <div className=" flex flex-col items-center">
+                    <h1 className="py-2">Payment Status</h1>
                     <p>{popupMessage}</p>
+                    <CartItemSummary cartItems={cartItems}/>
+                    <button
+                     onClick={handlePopupClose}
+                     className="px-4 py-2 bg-[#D87D4A] text-[#fff] w-[300px]"
+                     >Close</button>
                   </div>
                 </div>
 

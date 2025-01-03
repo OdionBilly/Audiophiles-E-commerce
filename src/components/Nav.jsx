@@ -36,8 +36,8 @@ const  Nav = ({toggleQuantity,clearCart,cartItems}) => {
 
 
   return (
-    <div>
-      <header className="bg-[#101010] text-[#f1f1f1]  py-10 px-[13%]">
+    <div className=' w-full z-50'>
+      <header className=" bg-[#101010] text-[#f1f1f1]  py-10 px-[13%]">
         <nav className="flex justify-between items-center py-10">
           <div className="lg:hidden cursor-pointer">
             <HiMenu onClick={toggleMenu} size={30}/>
@@ -102,6 +102,9 @@ const  Nav = ({toggleQuantity,clearCart,cartItems}) => {
 
       {menuOpen && (
         <div>
+          <p 
+          onClick={toggleMenu}
+          className='text-[30px] cursor-pointer ml-[350px]'>x</p>
            <Cartegory_1/>
         </div>
       )}

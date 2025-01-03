@@ -1,14 +1,20 @@
+import PropTypes from 'prop-types';
 import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { NavLink } from 'react-router-dom';
 import { FiShoppingCart } from "react-icons/fi"
+import { Cartegory_1 } from "./Cartegory-1";
+
 
 // import ShoppingCart from './ShoppingCart';
 // import Hero from './Hero';
 
-const  Nav = ({toggleQuantity,removeItem,clearCart,cartItems}) => { 
+const  Nav = ({toggleQuantity,clearCart,cartItems}) => { 
 
   const [cartOpen, setCartOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+
+
 
 // console.log(cartItems)
 
@@ -24,13 +30,17 @@ const  Nav = ({toggleQuantity,removeItem,clearCart,cartItems}) => {
     setCartOpen(!cartOpen);
 };
 
+ const toggleMenu = () => {
+  setMenuOpen(!menuOpen);
+};
+
 
   return (
     <div>
       <header className="bg-[#101010] text-[#f1f1f1]  py-10 px-[13%]">
         <nav className="flex justify-between items-center py-10">
           <div className="lg:hidden cursor-pointer">
-            <HiMenu/>
+            <HiMenu onClick={toggleMenu} size={30}/>
           </div>
           <div className="max-sm:text-[24px] md:text-[30px] md:w-[375px]">
              <h1 className="max-md:ml-[10px]">audiophiles</h1>
@@ -84,19 +94,20 @@ const  Nav = ({toggleQuantity,removeItem,clearCart,cartItems}) => {
                 {totalItems}
               </div>
             )}
-
-
-           {/* <ShoppingCart 
-             onclick={toggleCart}
-              clearCart={clearCart}
-              toggleQuantity={toggleQuantity}
-              removeItem={removeItem}
-              cartItems={cartItems}
-             /> */}
           </div>
         </nav>
       </header>
 
+      {/* {menuOpen && <Menu toggleMenu={toggleMenu} />} */}
+
+      {menuOpen && (
+        <div>
+           <Cartegory_1/>
+        </div>
+      )}
+
+
+      {/* {cartOpen && <ShoppingCart />} */}
       {cartOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className=" bg-[#fff]"> 
@@ -152,5 +163,12 @@ const  Nav = ({toggleQuantity,removeItem,clearCart,cartItems}) => {
     </div>
     
     )
+};
+
+Nav.propTypes = {
+  toggleQuantity: PropTypes.func.isRequired,
+  removeItem: PropTypes.func.isRequired,
+  clearCart: PropTypes.func.isRequired,
+  cartItems: PropTypes.array.isRequired,
 };
 export default Nav;

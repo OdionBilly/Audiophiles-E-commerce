@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState,useEffect } from "react"
 import countryList from 'country-list'
 import CartItemSummary from "./CartItemSummary";
@@ -106,14 +107,14 @@ const Checkout = ({cartItems}) => {
         
     return(
         <div className=" relative">
-            <div className="mx-[180px]">
+            <div className="xl:mx-[180px] max-sm:px-[10px]">
                 <div className="">
-                  <h1 className="mt-10 py-10 font-primaryextrabold text-[36px]">CHECKOUT</h1>
+                  <h1 className="mt-10 py-10 font-primaryextrabold text-[36px] max-sm:px-[100px] max-lg:px-[100px]">CHECKOUT</h1>
                 </div>
-                <h2 className="text-[#D87D4A] text-[20px] ">BILLING DETAILS</h2>
+                <h2 className="text-[#D87D4A] text-[20px] max-sm:px-[30px] max-lg:px-[40px] ">BILLING DETAILS</h2>
             </div> 
             <form action="" className="py-5">
-                <div className="mx-[180px] mt-10 flex justify-between w-1/2 mb-10">
+                <div className="max-sm:mx-10 max-lg:mx-10 xl:mx-[180px] mt-10 flex max-sm:flex-col max-sm:gap-10 max-lg:gap-10 xl:gap-5 w-1/2 mb-10">
                     <div className="">
                      <label htmlFor="" className=" block mb-4">Name</label>
                      <input 
@@ -123,17 +124,17 @@ const Checkout = ({cartItems}) => {
                      className=" px-5 py-4 border-2 w-[309px]"
                      />
                     </div>
-                    <div>
+                    <div >
                       <label htmlFor="" className=" block mb-4">email</label>
                       <input 
                       type="email" 
                       value={form.email}
                       name="email" id=""
                       onChange={handleChange}
-                      className="px-5 py-4 border-2 w-[309px]" />
+                      className="px-5 py-4 border-2 w-[309px] xl:w-[390px]" />
                     </div>
                 </div>
-                <div className="mx-[180px]">
+                <div className="max-sm:mx-10 max-lg:mx-10 xl:mx-[180px]">
                     <label htmlFor=""className="block mb-4">phone Number</label>
                     <input 
                     type="number"name="phone" 
@@ -145,18 +146,18 @@ const Checkout = ({cartItems}) => {
 
             {/* shipping Details */}
             <div className="">
-                <div className="mx-[180px] mt-[50px]">
-                    <h2 className="py-5 text-[#D87D4A] text-[20px]">SHIPPING INFO</h2>
-                    <div className="mt-10">
+                <div className="max-sm:mx-10 max-lg:mx-[40px] xl:mx-[180px] mt-[50px]">
+                    <h2 className="py-5 text-[#D87D4A] text-[20px] max-sm:mx-0 max-lg:mx-[10px]">SHIPPING INFO</h2>
+                    <div className="mt-10 ">
                         <label htmlFor=""className="block mb-2">Address</label>
                         <input
                          type="text" name="address" 
                          value={form.address}
                          onChange={handleChange}
-                         className="px-5 py-5 border-2 w-[68%]"/>
+                         className="px-5 py-5 border-2 max-sm:w-full max-lg:w-[655px] xl:w-[720px]"/>
                     </div>
 
-                    <div className="flex gap-[113px] mt-10">
+                    <div className="flex max-sm:flex-col max-sm:gap-10 max-lg:gap-10 xl:gap-[20px] mt-10">
                         <div>
                             <label htmlFor="" className="block mb-2">ZIP Code</label>
                             <input 
@@ -170,7 +171,7 @@ const Checkout = ({cartItems}) => {
                             <input type="text" name="city" 
                             value={form.city}
                             onChange={handleChange}
-                            className="px-5 py-5 border-2 w-[309px]" />
+                            className="px-5 py-5 border-2 w-[309px] xl:w-[390px]" />
                         </div>
                     </div>
 
@@ -195,9 +196,9 @@ const Checkout = ({cartItems}) => {
 
             {/* Payment Details */}
             <div className="mt-[100px]">
-                <h2 className="mx-[180px] text-[#D87D4A]">PAYMENT DETAILS</h2>
-                <div className="mt-[50px] flex justify-between mx-[180px] w-1/2">
-                    <p>payment Method</p>
+                <h2 className="max-sm:mx-10 max-lg:mx-[40px] xl:mx-[180px] text-[#D87D4A]">PAYMENT DETAILS</h2>
+                <div className="mt-[50px] flex max-sm:flex-col justify-between max-sm:mx-10 max-lg:mx-10 xl:mx-[180px] max-lg:w-[655px] xl:w-1/2">
+                    <p className="mb-5">payment Method</p>
                     <div>
                       <div className="border-2 py-5 px-5 w-[300px]"> 
                          <input 
@@ -221,8 +222,8 @@ const Checkout = ({cartItems}) => {
                     </div>
                 </div>
 
-                <div className="mx-[180px] mt-10 flex justify-between w-1/2 mb-10">
-                    <div className="">
+                <div className="max-sm:mx-10 max-lg:mx-10 xl:mx-[160px] mt-10 flex max-sm:flex-col max-lg:gap-10 justify-between w-1/2 mb-10">
+                    <div className="max-sm:mb-5 xl:mx-5">
                      <label htmlFor="" className=" block mb-2">e.Money Number</label>
                      <input
                       type="number"name="emoneynumber"
@@ -236,15 +237,15 @@ const Checkout = ({cartItems}) => {
                       type="number"name="emoneypin" 
                       value={form.emoneypin}
                       onChange={handleChange}
-                      className="px-5 py-4 border-2  w-[309px]"/>
+                      className="px-5 py-4 border-2  w-[309px] xl:w-[390px]"/>
                     </div>
                 </div>
             </div>
 
             {/* SUMMARY */}
-            <div className="absolute top-0 right-[109px] mt-10">
+            <div className=" xl:absolute top-0 right-[109px] mt-10">
               <div>
-                <h1 className="text-[30px] font-primaryextrabold">SUMMARY</h1>
+                <h1 className="text-[30px] font-primaryextrabold max-sm:text-center max-lg:text-center">SUMMARY</h1>
                 <div className="py-5">
                   {cartItems.map((item,index) => (
                     <div key={index} className="  xl:w-[300px] justify-between flex  items-center py-2">
@@ -260,7 +261,7 @@ const Checkout = ({cartItems}) => {
                   ))}
 
                   {/* ToTal */}
-                  <div>
+                  <div className="max-sm:w-[300px] max-lg:w-[600px] xl:w-[330px] max-sm:ml-10 max-lg:ml-[80px]">
                     <div className="flex justify-between mt-12">
                       <h2 className="text-[20px] font-primarybold text-[#a3a0a0]">TOTAL</h2>
                       <span>${summary.subtotal.toFixed()}</span>
@@ -306,4 +307,16 @@ const Checkout = ({cartItems}) => {
     )
 
 }
+Checkout.propTypes = {
+  cartItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      quantity: PropTypes.number.isRequired,
+      image: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
+
 export default Checkout

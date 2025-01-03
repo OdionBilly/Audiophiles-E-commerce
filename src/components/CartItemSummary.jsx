@@ -1,13 +1,11 @@
 // import React from 'react';
 
-import { useState } from "react";
-
 
 
 const CartItemSummary = ({ cartItems }) => {
 
- const {id,name,price,quantity,image} = cartItems
- console.log(name)
+//  const {id,name,price,quantity,image} = cartItems
+//  console.log(price)
 
 
   return (
@@ -22,7 +20,6 @@ const CartItemSummary = ({ cartItems }) => {
       ))}
      
       </div>  
-    // </div>
   );
 };
 

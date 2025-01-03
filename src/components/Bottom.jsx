@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import headset from '../mobile-image/Group 6.png'
 import speaker from '../mobile-image/Group 7.png'
 import headphone from '../mobile-image/Group 8.png'
@@ -13,34 +13,37 @@ import bitmapd from '../mobile-image/Bitmap-2.png'
 
 export default function Bottom() {
 
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   return (
-    <div className=" overflow-hidden">
+    <div className=" overflow-hidden xl:mt-10">
       <div className="md:px-[20px] lg:px-[13%] md:flex gap-5 lg:flex py-5 mb-8">
         <div className="max-sm:m-5">
-          <img
-            onClick={() => navigate("headphones")}
+        <Link to={`/headphones`}> 
+           <img
             className="md:w-auto md:h-auto lg:w-[350px] lg:h-[284px] cursor-pointer"
             src={headset}
             alt="headset-image"
           />
+         </Link> 
         </div>
         <div className="max-sm:m-5 lg:w-[350px] lg:h-[284px]">
+        <Link to={`/speakers`}>
           <img
-          onClick={() => navigate("speakers")}
             className="md:w-auto md:h-auto lg:w-[350px] lg:h-[284px] cursor-pointer"
             src={speaker}
             alt="speaker-image"
           />
+          </Link>
         </div>
         <div className="max-sm:m-5 lg:w-[350px] lg:h-[284px]">
+          <Link to={`/earphones`}>
           <img
-          onClick={() => navigate("earphones")}
             className="md:w-auto md:h-auto lg:w-[350px] lg:h-[284px] cursor-pointer"
             src={headphone}
-            alt="headphone-image"
+            alt="earphone-image"
           />
+          </Link>
         </div>
       </div>
 
@@ -48,6 +51,7 @@ export default function Bottom() {
 
       <div className="text-[#f1f1f1] text-center bg-[#D87D4A] py-10 lg:flex lg:h-[530px] lg:mx-[13%]">
         <div className="px-[100px] py-5">
+
           <img
             className="md:ml-[30%] md:py-10 md:w-[220px] lg:w-[380px]"
             src={speakers}

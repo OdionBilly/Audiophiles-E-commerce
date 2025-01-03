@@ -67,12 +67,15 @@ export default function Bottom() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
+
+          <Link to={`/speakers/6`}>
           <button
             className="bg-[#101010] w-[160px] h-[48px] text-[13px] m-12 hover:bg-[#4c4c4c]"
             type="button"
           >
             SEE PRODUCT
           </button>
+          </Link>
         </div>
       </div>
 
@@ -82,12 +85,14 @@ export default function Bottom() {
           <h3 className="w-[202px] text-[28px] font-primarymedium py-4">
             ZX7 SPEAKER
           </h3>
+          <Link to={`/speakers/5`}>
           <button
             className="text-[13px] border-2 border-black px-4 py-2 lg:px-6 hover:bg-[#101010] hover:text-[#f1f1f1] "
             type="button"
           >
             SEE PRODUCT
           </button>
+          </Link>
         </div>
         <div className="">
           <img className="sm:hidden" src={bitmap} alt="bitmap-mobile-image" />
@@ -118,12 +123,14 @@ export default function Bottom() {
             <h2 className="text-[28px] font-primarymedium py-4">
               YX1 EARPHONES
             </h2>
+            <Link to={`/earphones/1`}>
             <button
               className="text-[13px] border-2 border-black px-4 py-2 hover:bg-[#101010] hover:text-[#f1f1f1]"
               type="button"
             >
               SEE PRODUCT
             </button>
+            </Link>
           </div>
         </div>
       </div>

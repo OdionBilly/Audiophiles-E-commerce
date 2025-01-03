@@ -1,4 +1,5 @@
 // import React from 'react'
+import { Link } from 'react-router-dom'
 import heroimage from '../Bgimage/Bitmap-bg-mobile.png'
 import tabletimage from '../Bgimage/Bitmap-bg-Tablet.png'
 import desktop from '../Bgimage/Bitmap-bg-mobile.png'
@@ -19,12 +20,14 @@ export default function Hero() {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-
+         
+         <Link to={`/headphones/4`}>
           <button
             className="w-[160px] h-[48px] px-[5px] py-[5px] bg-[#D87D4A] text-[13px] hover:bg-[#FBAF85]"
           >
             SEE PRODUCT
           </button>
+          </Link>
         </div>
         <div className=" md:ml-[100px] lg:px-0">
           <img src={heroimage} alt="" className="xl:mt-[-50px]" />

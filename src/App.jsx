@@ -12,7 +12,7 @@ import Earphonedetail from './products/Earphonedetail';
 import Checkout from "./components/Checkout";
 
 function App() {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState([]); 
 
   // // function to addproduct to cart
   const addToCart = (product) => {

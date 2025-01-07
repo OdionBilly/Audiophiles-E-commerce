@@ -23,6 +23,14 @@ export default function Speaker() {
       <h1 className="text-center text-[25px] font-primaryextrabold text-[#fff] bg-[#151515] pb-4">
         SPEAKERS
       </h1>
+      {/* Link to Home */}
+      <div className='px-12 mt-4 xl:hidden'>
+        <Link to="/">
+         <button
+         className='cursor-pointer bg-[#D87D4A] text-[#fff] font-primaryregular px-4 py-2'
+          type="button">Home</button>
+        </Link>
+      </div>
 
       <div>
         {speakers.map((speaker, index) => {

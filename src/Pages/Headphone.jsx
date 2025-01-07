@@ -18,6 +18,14 @@ const Headphone = () => {
     <div>
       <Header />
       <div>
+        {/* Link to Home */}
+      <div className='px-12 mt-4 xl:hidden'>
+        <Link to="/">
+         <button
+         className='cursor-pointer bg-[#D87D4A] text-[#fff] font-primaryregular px-4 py-2'
+          type="button">Home</button>
+        </Link>
+      </div>
         <div>
           {headphones.map((headphone , index) => {
             return (

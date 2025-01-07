@@ -7,8 +7,8 @@ import Speaker from "./Pages/Speaker";
 import Earphone from "./Pages/Earphone";
 import Nav from "./components/Nav";
 import { ProductDetails } from "./Pages/ProductDetails";
-import Speakerdetail from "./Products/Speakerdetail";
-import Earphonedetail from './Products/Earphonedetail';
+import { Speakerdetail } from "./Products/Speakerdetail";
+import { Earphonedetail } from './Products/Earphonedetail';
 import Checkout from "./components/Checkout";
 
 function App() {

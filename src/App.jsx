@@ -7,13 +7,15 @@ import Speaker from "./Pages/Speaker";
 import Earphone from "./Pages/Earphone";
 import Nav from "./components/Nav";
 import { ProductDetails } from "./Pages/ProductDetails";
-import { Speakerdetail } from "./Products/Speakerdetail";
+// import { Speakerdetail } from "./Products/Speakerdetail";
 // import { Earphonedetail } from './Products/Earphonedetail';
 import Checkout from "./components/Checkout";
 
 function App() {
   const [cartItems, setCartItems] = useState([]); 
   // <Route path="/earphones/:earphoneId" element={<Earphonedetail addToCart={addToCart}/>}/>
+  // <Route path="/speakers/:speakerId" element={<Speakerdetail addToCart={addToCart}/>}/>
+
 
 
 
@@ -66,7 +68,6 @@ function App() {
           <Route path="/speakers/" element={<Speaker />} />
           <Route path="/earphones/" element={<Earphone />} />
           <Route path="/headphones/:headphoneId" element={<ProductDetails addToCart={addToCart}/>} />
-          <Route path="/speakers/:speakerId" element={<Speakerdetail addToCart={addToCart}/>}/>
           <Route path="/Checkout"element={<Checkout cartItems={cartItems}/>}/>
         </Routes>
         <Footer />

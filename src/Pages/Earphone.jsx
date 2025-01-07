@@ -32,7 +32,7 @@ export default function Earphone() {
             >
               <div>
                 <img
-                  src={earphone.categoryImage.mobile}
+                  src={earphone.categoryImage.desktop}
                   alt="image"
                   className="sm:size-[250px] md:size-[389px]  xl:size-[450px]"
                 />

@@ -39,8 +39,9 @@ const Headphone = () => {
                   <img
                     className=""
                     src={headphone.categoryImage.desktop}
-                    alt={headphone.name}
+                    alt=""
                   />
+                  {/* <img src="/src/assets/product-xx59-headphones/desktop/image-product.jpg" alt="" /> */}
 
                 </div>
 

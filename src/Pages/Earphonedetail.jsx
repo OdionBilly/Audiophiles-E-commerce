@@ -65,7 +65,7 @@ export default function Earphonedetail({addToCart}) {
       <div className="px-6 md:px-12p xl:px-[110px] flex max-md:flex-col md:gap-[60px] xl:gap-10">
         <div>
           <img
-            src={earphone.categoryImage.mobile}
+            src={earphone.image}
             alt={earphone.name}
             className="max-md:w-[381px] md:h-[481px] xl:w-[540px] xl:h-[560px]"
           />

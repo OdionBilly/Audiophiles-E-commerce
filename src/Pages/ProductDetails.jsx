@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ProductData from "../data.json";
+import ProductData from "../../public/data.json";
 import { BsPlus, BsDash } from "react-icons/bs";
 // import Headphone from "./Headphone";
 import Bottom from "../components/Bottom";

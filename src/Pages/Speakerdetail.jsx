@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useParams , } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import ProductData from '../data.json'
+import ProductData from '../../public/data.json';
 import { BsPlus, BsDash } from 'react-icons/bs';
 import Bottom from '../components/Bottom';
 // import { HiMenu } from 'react-icons/hi';

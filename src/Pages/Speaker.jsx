@@ -1,5 +1,5 @@
 // import React from "react";
-import productData from "../data.json";
+import productData from "../../public/data.json";
 import { Link } from "react-router-dom";
 import { Cartegory_1 } from "../components/Cartegory-1";
 import { Cartegory_2 } from "../components/Cartegory-2";

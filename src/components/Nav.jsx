@@ -6,7 +6,6 @@ import { NavLink } from 'react-router-dom';
 import { FiShoppingCart } from "react-icons/fi"
 import { Cartegory_1 } from "./Cartegory-1";
 
-
 // import ShoppingCart from './ShoppingCart';
 // import Hero from './Hero';
 
@@ -15,9 +14,6 @@ const  Nav = ({toggleQuantity,clearCart,cartItems}) => {
   const [cartOpen, setCartOpen] = useState(false)
   const [isopen, setIsOpen] = useState(false)
 
-
-
-// console.log(cartItems)
 
 
 

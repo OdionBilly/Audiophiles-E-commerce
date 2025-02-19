@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
+import { MdOutlineClose } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 import { FiShoppingCart } from "react-icons/fi"
 import { Cartegory_1 } from "./Cartegory-1";
@@ -12,7 +13,7 @@ import { Cartegory_1 } from "./Cartegory-1";
 const  Nav = ({toggleQuantity,clearCart,cartItems}) => { 
 
   const [cartOpen, setCartOpen] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [isopen, setIsOpen] = useState(false)
 
 
 
@@ -30,17 +31,16 @@ const  Nav = ({toggleQuantity,clearCart,cartItems}) => {
     setCartOpen(!cartOpen);
 };
 
- const toggleMenu = () => {
-  setMenuOpen(!menuOpen);
-};
 
 
   return (
     <div className=' w-full z-50'>
       <header className=" bg-[#101010] text-[#f1f1f1]  py-10 px-[13%]">
         <nav className="flex justify-between items-center py-10">
-          <div className="lg:hidden cursor-pointer">
-            <HiMenu onClick={toggleMenu} size={30}/>
+          <div 
+            onClick ={() => setIsOpen(!isopen)}
+            className="lg:hidden cursor-pointer">
+            {isopen ? <MdOutlineClose size={30}/> : <HiMenu size={30}/>}
           </div>
           <div className="max-sm:text-[24px] md:text-[30px] md:w-[375px]">
              <h1 className="max-md:ml-[10px]">audiophiles</h1>
@@ -100,14 +100,11 @@ const  Nav = ({toggleQuantity,clearCart,cartItems}) => {
 
       {/* {menuOpen && <Menu toggleMenu={toggleMenu} />} */}
 
-      {menuOpen && (
-        <div>
-          <p 
-          onClick={toggleMenu}
-          className='text-[30px] cursor-pointer ml-[350px]'>x</p>
-           <Cartegory_1/>
-        </div>
-      )}
+      {isopen &&
+      <div className="">
+       <Cartegory_1/>
+      </div>
+      }
 
 
       {/* {cartOpen && <ShoppingCart />} */}

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import ProductData from '../../public/data.json';
 import { BsPlus, BsDash } from 'react-icons/bs';
 import Bottom from '../components/Bottom';
+import { motion } from 'framer-motion';
 // import { HiMenu } from 'react-icons/hi';
 
 
@@ -57,6 +58,11 @@ export default function Speakerdetail({addToCart}) {
   }
 
   return (
+    <motion.div
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    transition={{duration:2}}
+    >
     <div>
       <Link to={`/speakers`}>
         <h1 className=" md:px-12 xl:px-[190px] p-5">Go back</h1>
@@ -153,6 +159,7 @@ export default function Speakerdetail({addToCart}) {
       </div>
       <Bottom/>
     </div>
+    </motion.div>
   );
 }
 Speakerdetail.propTypes = {

@@ -5,10 +5,9 @@ import { useParams } from 'react-router-dom'
 import {useState, useEffect } from 'react'
 import ProductData from '../../public/data.json'
 import { BsPlus, BsDash } from 'react-icons/bs'
-// import Others from '../components/Others'
 import Bottom from '../components/Bottom'
 import { Others } from '../components/Others';
-// import { GrBottomCorner } from 'react-icons/gr'
+import { motion } from 'framer-motion'
 
 
 
@@ -57,6 +56,12 @@ export default function Earphonedetail({addToCart}) {
   }
 
   return (
+    <motion.div
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    transition={{ duration: 2 }}>
+
     <div>
       <Link to={`/earphones`}>
         <button className=" px-6 md:px-12 xl:px-[110px] p-4">Back</button>
@@ -143,6 +148,7 @@ export default function Earphonedetail({addToCart}) {
 
       <Bottom/>
     </div>
+    </motion.div>
   );
 
  

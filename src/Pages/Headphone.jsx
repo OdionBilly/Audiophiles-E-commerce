@@ -4,6 +4,7 @@ import { Header } from '../components/Header';
 import { Link } from 'react-router-dom';
 import { Cartegory_2 } from '../components/Cartegory-2';
 import { Cartegory_1 } from '../components/Cartegory-1';
+import { motion } from "motion/react";
 
 
 
@@ -15,6 +16,13 @@ const Headphone = () => {
   // console.log(headphones);
 
   return (
+    <motion.div
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    transition={{ duration: 1 }}
+    >
+   
     <div>
       <Header />
       <div>
@@ -73,6 +81,7 @@ const Headphone = () => {
 
       <Cartegory_2 />
     </div>
+    </motion.div>
   );
 }
 export default Headphone

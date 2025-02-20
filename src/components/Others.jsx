@@ -8,7 +8,7 @@ import React from 'react'
       <div> 
         <h1 className='py-[60px] mx-auto text-center text-[35px] font-primaryextrabold'>YOU MAY ALSO LIKE</h1>
         <div>
-          <div className='flex gap-5 text-center px-[190px]'> 
+          <div className='flex gap-5 text-center xl:px-[190px] max-sm:px-5 sm:px-10'> 
             {earphone.others.map((data, index) => {
                 return (
                     <div key={index} className="">

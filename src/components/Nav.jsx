@@ -5,6 +5,7 @@ import { MdOutlineClose } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 import { FiShoppingCart } from "react-icons/fi"
 import { Cartegory_1 } from "./Cartegory-1";
+import {motion} from 'framer-motion'
 
 // import ShoppingCart from './ShoppingCart';
 // import Hero from './Hero';
@@ -30,6 +31,12 @@ const  Nav = ({toggleQuantity,clearCart,cartItems}) => {
 
 
   return (
+    <motion.div
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}} 
+    transition={{ duration: 1 }}
+    >
     <div className=' w-full z-50'>
       <header className=" bg-[#101010] text-[#f1f1f1]  py-10 px-[13%]">
         <nav className="flex justify-between items-center py-10">
@@ -157,6 +164,7 @@ const  Nav = ({toggleQuantity,clearCart,cartItems}) => {
         </div>
       )}
     </div>
+    </motion.div>
     
     )
 };

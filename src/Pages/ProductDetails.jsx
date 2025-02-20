@@ -9,6 +9,7 @@ import { BsPlus, BsDash } from "react-icons/bs";
 // import Headphone from "./Headphone";
 import Bottom from "../components/Bottom";
 // import Cart from "../components/Cart";
+import {motion} from 'framer-motion'
 
 export const ProductDetails = ({addToCart}) => {
 
@@ -55,6 +56,12 @@ export const ProductDetails = ({addToCart}) => {
   }
 
   return (
+    <motion.div
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    transition={{ duration: 1 }}  
+    >
     <div>
       <Link to={`/headphones`}>
         <h1 className="px-12 xl:px-[190px] p-2 xlp-4">Go Back</h1>
@@ -152,6 +159,7 @@ export const ProductDetails = ({addToCart}) => {
   
       <Bottom/>
     </div>
+    </motion.div>
   );
 };
 ProductDetails.propTypes = {

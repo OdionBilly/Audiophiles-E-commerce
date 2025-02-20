@@ -3,6 +3,8 @@ import productData from "../../public/data.json";
 import { Link } from "react-router-dom";
 import { Cartegory_1 } from "../components/Cartegory-1";
 import { Cartegory_2 } from "../components/Cartegory-2";
+import { motion } from "motion/react";
+// import {motion} from 'framer-motion'
 
 export default function Speaker() {
   const speakers = productData.filter(
@@ -19,6 +21,13 @@ export default function Speaker() {
   })
 
   return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      
+
     <div>
       <h1 className="text-center text-[25px] font-primaryextrabold text-[#fff] bg-[#151515] pb-4">
         SPEAKERS
@@ -72,8 +81,18 @@ export default function Speaker() {
           );
         })}
      </div>
+ 
+     <div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}>  
       <Cartegory_1 />
       <Cartegory_2 />
+      </motion.div>
+     </div>
     </div>
+    </motion.div>
+
   );
 }

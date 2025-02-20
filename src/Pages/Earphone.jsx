@@ -3,6 +3,7 @@ import { Cartegory_1 } from '../components/Cartegory-1'
 import { Cartegory_2 } from '../components/Cartegory-2'
 import ProductData from '../../public/data.json'
 import { Link } from 'react-router-dom'
+import {motion} from 'framer-motion'
 
 
 export default function Earphone() {
@@ -11,6 +12,13 @@ export default function Earphone() {
     (earphones) => earphones.category === 'earphones');
 
   return (
+    <motion.div
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    transition={{ duration: 1 }}
+    >
+     
     <div>
       <h1 className="text-center text-[25px] font-primaryextrabold text-[#fff] bg-[#151515] pb-4">
         EARPHONES
@@ -67,5 +75,6 @@ export default function Earphone() {
       </div>
       <Cartegory_2 />
     </div>
+    </motion.div>
   );
 }

@@ -1,8 +1,16 @@
 import { NavLink } from 'react-router-dom'
 import { BsFacebook , BsTwitter , BsInstagram} from 'react-icons/bs'
+import { motion } from 'framer-motion'
 
 export default function Footer() {
+  
   return (
+    <motion.div
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    transition={{ duration: 1 }}
+    >
     <div className="bg-[#101010] text-[#f1f1f1] py-10 pb-10  mt-[8%] md:px-[8%] md:mt-[2%] lg:mt-[70px]">
       <div className="lg:flex justify-between items-baseline lg:w-[1440px] lg:px-[13%]">
         <div className="lg:ml-[-165px]">
@@ -81,5 +89,6 @@ export default function Footer() {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 }
